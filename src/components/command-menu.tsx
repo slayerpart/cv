@@ -1,7 +1,7 @@
 "use client";
 
-import { useDarkLightMode } from "../hooks/use-dark-light-mode";
-import { DarkLightModeIcon } from "./icons/dark-light-mode-icon";
+import { MODE, useDarkLightMode } from "../hooks/use-dark-light-mode";
+import { DarkLightModeIcon } from "./icons";
 import { Button } from "./ui/button";
 import {
   CommandDialog,
@@ -79,7 +79,11 @@ export const CommandMenu = ({ links, certificates }: Props) => {
             </CommandItem>
             <CommandItem onSelect={toggleDarkLightMode}>
               <span>
-                Toggle {darkLightMode === "light" ? "dark" : "light"} mode
+                Toggle{" "}
+                {darkLightMode && darkLightMode === MODE.DARK
+                  ? MODE.LIGHT
+                  : MODE.DARK}{" "}
+                mode
               </span>
             </CommandItem>
 

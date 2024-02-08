@@ -1,9 +1,8 @@
-import { useCallback, useLayoutEffect, useState } from "react";
-import { z } from "zod";
+import { getCookie, setCookie } from "cookies-next";
+import { useCallback, useLayoutEffect, useMemo, useState } from "react";
 
 export const MODE = { LIGHT: "light", DARK: "dark" } as const;
-const DarkLightModeSchema = z.enum([MODE.LIGHT, MODE.DARK]);
-export type DarkLightMode = z.infer<typeof DarkLightModeSchema>;
+export type DarkLightMode = (typeof MODE)[keyof typeof MODE];
 
 /**
  * Sets the dark/light mode for the application.
@@ -14,28 +13,28 @@ const setMode = (mode: DarkLightMode) => {
 
   if (mode === MODE.LIGHT) {
     root.classList.add(MODE.DARK);
-    localStorage.setItem("darkLightMode", JSON.stringify(MODE.DARK));
+    setCookie("darkMode", "true");
   } else {
     root.classList.remove(MODE.DARK);
-    localStorage.setItem("darkLightMode", JSON.stringify(MODE.LIGHT));
+    setCookie("darkMode", "false");
   }
 };
 
 /**
  * Custom hook for managing dark/light mode.
- * Retrieves the mode from local storage, if available, and initializes it.
+ * Retrieves the mode from cookie, if available, and initializes it.
  * Provides a function to toggle between dark and light mode.
  *
  * @returns An object containing the current dark/light mode and a function to toggle the mode.
  */
 export const useDarkLightMode = () => {
-  const storageValue = localStorage.getItem("darkLightMode");
-  const storedMode = storageValue
-    ? DarkLightModeSchema.parse(JSON.parse(storageValue))
-    : undefined;
-  const [darkLightMode, setDarkLightMode] = useState<DarkLightMode>(
-    storedMode ?? MODE.LIGHT,
-  );
+  const [darkLightMode, setDarkLightMode] = useState<DarkLightMode>();
+
+  const darkMode = useMemo(() => getCookie("darkMode") ?? "false", []);
+
+  useLayoutEffect(() => {
+    setDarkLightMode(darkMode === "true" ? MODE.DARK : MODE.LIGHT);
+  }, [darkMode]);
 
   const toggleDarkLightMode = useCallback(() => {
     const switchMode = () => {
@@ -49,8 +48,7 @@ export const useDarkLightMode = () => {
   }, []);
 
   useLayoutEffect(() => {
-    const targetMode = darkLightMode === MODE.LIGHT ? MODE.DARK : MODE.LIGHT;
-    setMode(targetMode);
+    setMode(darkLightMode === MODE.LIGHT ? MODE.DARK : MODE.LIGHT);
   }, [darkLightMode]);
 
   return { darkLightMode, toggleDarkLightMode };
