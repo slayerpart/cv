@@ -2,6 +2,7 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import { NavBar } from "@/components/nav-bar";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Viewport } from "next";
 import { Inter } from "next/font/google";
 import { cookies } from "next/headers";
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <Footer />
       </body>
       <Analytics />
+      <SpeedInsights />
     </html>
   );
 }
