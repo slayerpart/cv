@@ -4,7 +4,7 @@ import { usePageScrollProgress } from "@/hooks/use-page-scroll-progress";
 export const NavBar = () => {
   const scrollPercentage = usePageScrollProgress();
   return (
-    <nav className="sticky top-0 z-50 pt-1 backdrop-blur">
+    <nav className="sticky top-0 z-50 overflow-x-hidden pt-1 backdrop-blur">
       <span
         style={{
           transform: `translateX(${scrollPercentage - 100}%)`,

@@ -1,15 +1,23 @@
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
+import type { Viewport } from "next";
 
 import "./globals.css";
 import React, { PropsWithChildren } from "react";
 import { NavBar } from "@/components/nav-bar";
 
-// If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+};
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
