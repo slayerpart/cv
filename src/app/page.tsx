@@ -14,6 +14,31 @@ import { Certificate } from "crypto";
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
   description: RESUME_DATA.summary,
+  icons: {
+    icon: [
+      {
+        url: "/static/favicon.ico?v=4",
+        // `sizes="any"` is to fix Chrome bug
+        sizes: "any",
+      },
+      {
+        url: "/static/icon.svg",
+        type: "image/svg+xml",
+      },
+      {
+        url: "/static/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/static/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+    apple: ["/static/apple-touch-icon.png?v=4"],
+    shortcut: ["/static/apple-touch-icon.png"],
+  },
 };
 
 export default function Page() {
