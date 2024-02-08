@@ -21,13 +21,15 @@ export const DrawSignature = () => {
     useTransform(scrollYProgress, [0.964, 0.972], [0, 1]),
     useTransform(scrollYProgress, [0.972, 0.98], [0, 1]),
     useTransform(scrollYProgress, [0.98, 0.988], [0, 1]),
-    useTransform(scrollYProgress, [0.988, 0.995], [0, 1]),
-    useTransform(scrollYProgress, [0.995, 1], [0, 1]),
+    useTransform(scrollYProgress, [0.988, 0.992], [0, 1]),
+    useTransform(scrollYProgress, [0.992, 0.996], [0, 1]),
   ] as const;
 
   return (
     <section aria-hidden className="flex w-64 items-center justify-center">
       <svg
+        width="100%"
+        height="100%"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="219.210 357.360 962.415 158.227"
       >

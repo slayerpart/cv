@@ -58,7 +58,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 pb-24 print:p-12 md:p-16 md:pb-32">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <HeaderSection />
         <Section>
@@ -83,7 +83,7 @@ export default function Page() {
           </div>
         </Section>
         <ProjectSection />
-        <Section className="flex scroll-mb-16 items-center justify-center p-8 print:hidden">
+        <Section className="scroll-mb-16 lex items-center justify-center p-8 pb-32 print:hidden">
           <DrawSignature />
         </Section>
       </section>
