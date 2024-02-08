@@ -28,7 +28,7 @@ export const RESUME_DATA = {
   about:
     "Frontend Engineer focused on building accessible user interfaces with extra attention to UX",
   summary:
-    "As a Frontend Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
+    "As a Frontend Engineer and Technical Lead, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
   avatarUrl: "https://avatars.githubusercontent.com/u/6815357?v=4",
   personalWebsiteUrl: "https://gorecki.cc",
   contact: {
@@ -76,25 +76,39 @@ export const RESUME_DATA = {
       company: "NordLayer",
       link: "https://nordlayer.com",
       badges: [],
-      title: "Tech Lead",
+      title: "Technical Lead",
       logo: NordLayerLogo,
       start: "12/2022",
       end: "now",
       description:
         "Accountable for technical product decisions, led team of 3 FE engineers and came up with their individual development plans, improved core web vitals of various web apps, sped up CI pipelines and introduced automated transitive dependency vulnerability detection.",
-      technologies: ["React", "TypeScript", "React Query", "Gitlab CI"],
+      technologies: [
+        "React",
+        "TypeScript",
+        "React Query",
+        "Styled Components",
+        "Cypress",
+        "Gitlab CI",
+      ],
     },
     {
       company: "NordLayer",
       link: "https://nordlayer.com",
       badges: [],
-      title: "Tech Lead",
+      title: "Senior Frontend Engineer",
       logo: NordLayerLogo,
       start: "04/2022",
       end: "12/2022",
       description:
         "Implemented new product features, design system and worked on improving the way developers ship the code. Taught advanced TypeScript concepts to colleagues.",
-      technologies: ["React", "TypeScript", "React Query", "Gitlab CI"],
+      technologies: [
+        "React",
+        "TypeScript",
+        "React Query",
+        "Styled Components",
+        "Cypress",
+        "Gitlab CI",
+      ],
     },
     // {
     //   company: "Clevertech",
