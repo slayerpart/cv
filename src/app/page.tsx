@@ -8,6 +8,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -109,6 +110,14 @@ export default function Page() {
                       <a className="hover:underline" href={work.link}>
                         {work.company}
                       </a>
+                      {"logo" in work && (
+                        <Image
+                          width={16}
+                          height={16}
+                          src={work.logo}
+                          alt={`${work.company} logo`}
+                        />
+                      )}
 
                       <span className="inline-flex gap-x-1">
                         {work.badges.map((badge) => (
@@ -196,6 +205,7 @@ export default function Page() {
                   description={project.description}
                   tags={project.techStack}
                   link={"link" in project ? project.link.href : undefined}
+                  logo={project.logo}
                 />
               );
             })}

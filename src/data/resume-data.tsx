@@ -17,6 +17,9 @@ import {
   TastyCloudLogo,
   YearProgressLogo,
   NordLayerLogo,
+  NordSecurityLogo,
+  NexenioLogo,
+  HPILogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
@@ -49,7 +52,7 @@ export const RESUME_DATA = {
   },
   education: [
     {
-      school: "Hasso Plattner Institut",
+      school: "Hasso Plattner Institute",
       degree: "IT Systems Engineering M.Sc.",
       grade: "discontinued",
       focus: "Information security",
@@ -57,7 +60,7 @@ export const RESUME_DATA = {
       end: "2021",
     },
     {
-      school: "Hasso Plattner Institut",
+      school: "Hasso Plattner Institute",
       degree: "IT Systems Engineering B.Sc.",
       grade: "1.5",
       start: "2013",
@@ -73,11 +76,11 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "NordLayer",
-      link: "https://nordlayer.com",
+      company: "Nord Security",
+      link: "https://nordsecurity.com",
       badges: [],
       title: "Technical Lead",
-      logo: NordLayerLogo,
+      logo: NordSecurityLogo,
       start: "12/2022",
       end: "now",
       description:
@@ -92,11 +95,11 @@ export const RESUME_DATA = {
       ],
     },
     {
-      company: "NordLayer",
-      link: "https://nordlayer.com",
+      company: "Nord Security",
+      link: "https://nordsecurity.com",
       badges: [],
       title: "Senior Frontend Engineer",
-      logo: NordLayerLogo,
+      logo: NordSecurityLogo,
       start: "04/2022",
       end: "12/2022",
       description:
@@ -109,6 +112,65 @@ export const RESUME_DATA = {
         "Cypress",
         "Gitlab CI",
       ],
+    },
+    {
+      company: "neXenio",
+      link: "https://nexenio.com",
+      badges: [],
+      title: "Senior Frontend Engineer",
+      logo: NexenioLogo,
+      start: "04/2020",
+      end: "03/2022",
+      description: "",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Redux",
+        "Redux Saga",
+        "Styled Components",
+        "Jenkins",
+      ],
+    },
+    {
+      company: "neXenio",
+      link: "https://nexenio.com",
+      badges: [],
+      title: "Frontend Engineer",
+      logo: NexenioLogo,
+      start: "04/2017",
+      end: "03/2020",
+      description: "",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Redux",
+        "Redux Saga",
+        "Styled Components",
+        "Jenkins",
+      ],
+    },
+    {
+      company: "Inspora",
+      link: "https://inspora.com",
+      badges: [],
+      title: "Junior Frontend Engineer",
+      start: "04/2016",
+      end: "03/2017",
+      description:
+        "Developed and maintained internal internal tool to leverage machine learning algorithms with tagged input data",
+      technologies: ["React", "Flow", "Redux", "Styled Components"],
+    },
+    {
+      company: "Information Systems Research Group, HPI",
+      link: "https://hpi.de/naumann/home.html",
+      badges: [],
+      title: "Student Assistant",
+      logo: HPILogo,
+      start: "04/2014",
+      end: "03/2016",
+      description:
+        "Implement an automated data scraping and aggregation system integrating multiple heterogeneous public data sets to uncover the bigger picture.",
+      technologies: ["React.js", "Python", "Scrapy", "AWS"],
     },
     // {
     //   company: "Clevertech",
@@ -143,6 +205,7 @@ export const RESUME_DATA = {
     //   description: "Creating and testing software for LTE base stations",
     // },
   ],
+
   skills: [
     "TypeScript",
     "JavaScript",
@@ -226,16 +289,6 @@ export const RESUME_DATA = {
     //   link: {
     //     label: "barepapers.com",
     //     href: "https://barepapers.com/",
-    //   },
-    // },
-    // {
-    //   title: "Year progress",
-    //   techStack: ["Side Project", "TypeScript", "Next.js"],
-    //   description: "Tracks current year progress and displays a countdown",
-    //   logo: YearProgressLogo,
-    //   link: {
-    //     label: "getyearprogress.com",
-    //     href: "https://getyearprogress.com/",
     //   },
     // },
     // {

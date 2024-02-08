@@ -6,20 +6,32 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { ReactNode } from "react";
+import Image from "next/image";
 
 interface Props {
   title: string;
   description: string;
   tags: readonly string[];
   link?: string;
+  logo?: string;
 }
 
-export function ProjectCard({ title, description, tags, link }: Props) {
+export function ProjectCard({ title, description, tags, link, logo }: Props) {
   return (
     <Card className="flex flex-col overflow-hidden border border-muted p-3">
       <CardHeader className="">
         <div className="space-y-1">
-          <CardTitle className="text-base">
+          <CardTitle className="flex text-base">
+            {logo && (
+              <Image
+                className="mr-1"
+                src={logo}
+                alt={`${title} logo`}
+                height={24}
+                width={24}
+              />
+            )}
             {link ? (
               <a
                 href={link}
