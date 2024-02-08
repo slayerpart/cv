@@ -70,14 +70,6 @@ export const CommandMenu = ({ links, certificates }: Props) => {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Actions">
-            <CommandItem
-              onSelect={() => {
-                setOpen(false);
-                window.print();
-              }}
-            >
-              <span>Print</span>
-            </CommandItem>
             <CommandItem onSelect={toggleDarkLightMode}>
               <span>
                 {darkLightMode && darkLightMode === MODE.DARK
@@ -86,7 +78,14 @@ export const CommandMenu = ({ links, certificates }: Props) => {
                 mode
               </span>
             </CommandItem>
-
+            <CommandItem
+              onSelect={() => {
+                setOpen(false);
+                window.print();
+              }}
+            >
+              <span>Print</span>
+            </CommandItem>
             {certificates.map(({ verification, abbreviation }) => (
               <CommandItem
                 key={abbreviation}
@@ -97,7 +96,7 @@ export const CommandMenu = ({ links, certificates }: Props) => {
                   }
                 }}
               >
-                <span>Verify {abbreviation} certificate</span>
+                <span>Verify certificate</span>
               </CommandItem>
             ))}
           </CommandGroup>

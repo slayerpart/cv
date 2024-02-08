@@ -1,4 +1,4 @@
-import { GitHubIcon, LinkedInIcon } from "@/components/icons";
+import { CodeIcon, GitHubIcon, LinkedInIcon } from "@/components/icons";
 import {
   BdriveLogo,
   DEAIcon,
@@ -31,6 +31,11 @@ export const RESUME_DATA = {
         name: "LinkedIn",
         url: "www.linkedin.com/in/marvin-go",
         icon: LinkedInIcon,
+      },
+      {
+        name: "View Code",
+        url: "https://github.com/slayerpart/cv",
+        icon: CodeIcon,
       },
     ],
   },
