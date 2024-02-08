@@ -1,4 +1,3 @@
-import { CommandMenu } from "@/components/command-menu";
 import {
   CertificateSection,
   EducationSection,
@@ -7,7 +6,6 @@ import {
   WorkSection,
 } from "@/components/sections";
 import { Badge } from "@/components/ui/badge";
-import { DrawSignature } from "@/components/ui/draw-signature";
 import { Section } from "@/components/ui/section";
 import { RESUME_DATA } from "@/data/resume-data";
 import { Metadata } from "next";
