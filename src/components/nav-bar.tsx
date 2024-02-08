@@ -9,7 +9,7 @@ export const NavBar = () => {
         style={{
           transform: `translateX(${scrollPercentage - 100}%)`,
         }}
-        className={`absolute top-0 h-1 w-[105%] rounded-md bg-red-400`}
+        className={`absolute top-0 h-1 w-[110%] rounded-md bg-red-400`}
       />
     </nav>
   );
