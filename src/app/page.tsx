@@ -83,7 +83,7 @@ export default function Page() {
           </div>
         </Section>
         <ProjectSection />
-        <Section className="scroll-mb-16 lex items-center justify-center p-8 pb-32 print:hidden">
+        <Section className="scroll-mb-16 lex items-center justify-center p-16 pb-32 print:hidden">
           <DrawSignature />
         </Section>
       </section>

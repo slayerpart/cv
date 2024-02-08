@@ -10,28 +10,34 @@ const transition = {
 export const DrawSignature = () => {
   const { scrollYProgress } = useScroll();
 
-  const pathLengths = [
-    useTransform(scrollYProgress, [0.92, 0.927], [0, 1]),
-    useTransform(scrollYProgress, [0.927, 0.937], [0, 1]),
-    useTransform(scrollYProgress, [0.937, 0.938], [0, 1]),
+  const pathLengthMotion = [
+    useTransform(scrollYProgress, [0.9, 0.91], [0, 1]),
+    useTransform(scrollYProgress, [0.91, 0.93], [0, 1]),
+    useTransform(scrollYProgress, [0.93, 0.933], [0, 1]),
+    useTransform(scrollYProgress, [0.933, 0.938], [0, 1]),
     useTransform(scrollYProgress, [0.938, 0.943], [0, 1]),
-    useTransform(scrollYProgress, [0.943, 0.948], [0, 1]),
-    useTransform(scrollYProgress, [0.948, 0.956], [0, 1]),
-    useTransform(scrollYProgress, [0.956, 0.964], [0, 1]),
-    useTransform(scrollYProgress, [0.964, 0.972], [0, 1]),
-    useTransform(scrollYProgress, [0.972, 0.98], [0, 1]),
+    useTransform(scrollYProgress, [0.943, 0.949], [0, 1]),
+    useTransform(scrollYProgress, [0.949, 0.954], [0, 1]),
+    useTransform(scrollYProgress, [0.954, 0.96], [0, 1]),
+    useTransform(scrollYProgress, [0.96, 0.972], [0, 1]),
+    useTransform(scrollYProgress, [0.972, 0.978], [0, 1]),
+    useTransform(scrollYProgress, [0.978, 0.98], [0, 1]),
     useTransform(scrollYProgress, [0.98, 0.988], [0, 1]),
-    useTransform(scrollYProgress, [0.988, 0.992], [0, 1]),
-    useTransform(scrollYProgress, [0.992, 0.996], [0, 1]),
   ] as const;
+
+  const slideDownMotion = useTransform(scrollYProgress, [0.9, 1], [-20, 0]);
 
   return (
     <section aria-hidden className="flex w-64 items-center justify-center">
-      <svg
+      <motion.svg
         width="100%"
         height="100%"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="219.210 357.360 962.415 158.227"
+        style={{
+          y: slideDownMotion,
+        }}
+        transition={transition}
       >
         <motion.path
           d="M 266.44,381.27 C 265.15 381.83, 264.25 382.66, 262.78 385.35 C 261.32 388.04, 260.97 390.09, 259.12 394.73 C 257.26 399.36, 255.96 402.47, 253.50 408.52 C 251.03 414.57, 249.54 418.08, 246.78 424.96 C 244.02 431.84, 242.38 435.77, 239.72 442.90 C 237.06 450.03, 235.74 453.78, 233.48 460.60 C 231.22 467.43, 230.16 470.94, 228.43 477.04 C 226.69 483.15, 226.01 486.12, 224.80 491.12 C 223.60 496.12, 222.84 498.41, 222.42 502.05 C 222.00 505.68, 222.27 507.24, 222.71 509.28 C 223.14 511.32, 223.86 511.73, 224.58 512.27 C 225.30 512.81, 225.76 512.62, 226.29 511.99 C 226.81 511.36, 226.91 511.00, 227.21 509.13 C 227.51 507.26, 227.46 506.06, 227.80 502.62 C 228.13 499.18, 228.08 496.88, 228.88 491.95 C 229.69 487.01, 230.29 484.02, 231.83 477.96 C 233.37 471.89, 234.38 468.39, 236.57 461.61 C 238.75 454.83, 240.05 451.10, 242.74 444.04 C 245.43 436.98, 247.10 433.07, 250.02 426.31 C 252.95 419.54, 254.57 416.10, 257.36 410.22 C 260.15 404.35, 261.72 401.37, 263.97 396.93 C 266.22 392.48, 267.56 390.87, 268.61 387.99 C 269.67 385.11, 269.69 383.89, 269.26 382.55 C 268.83 381.20, 267.74 380.71, 266.44 381.27"
@@ -39,7 +45,7 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[0],
+            pathLength: pathLengthMotion[0],
           }}
           transition={transition}
           stroke="currentColor"
@@ -52,7 +58,7 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[1],
+            pathLength: pathLengthMotion[1],
           }}
           transition={transition}
           stroke="currentColor"
@@ -65,7 +71,7 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[2],
+            pathLength: pathLengthMotion[2],
           }}
           transition={transition}
           stroke="currentColor"
@@ -78,7 +84,7 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[3],
+            pathLength: pathLengthMotion[3],
           }}
           transition={transition}
           stroke="currentColor"
@@ -91,7 +97,7 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[4],
+            pathLength: pathLengthMotion[4],
           }}
           transition={transition}
           stroke="currentColor"
@@ -104,7 +110,7 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[5],
+            pathLength: pathLengthMotion[5],
           }}
           transition={transition}
           stroke="currentColor"
@@ -117,7 +123,7 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[6],
+            pathLength: pathLengthMotion[6],
           }}
           transition={transition}
           stroke="currentColor"
@@ -130,7 +136,7 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[7],
+            pathLength: pathLengthMotion[7],
           }}
           transition={transition}
           stroke="currentColor"
@@ -143,7 +149,7 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[8],
+            pathLength: pathLengthMotion[8],
           }}
           transition={transition}
           stroke="currentColor"
@@ -156,7 +162,7 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[9],
+            pathLength: pathLengthMotion[9],
           }}
           transition={transition}
           stroke="currentColor"
@@ -169,7 +175,7 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[10],
+            pathLength: pathLengthMotion[10],
           }}
           transition={transition}
           stroke="currentColor"
@@ -182,14 +188,14 @@ export const DrawSignature = () => {
             pathLength: 0,
           }}
           style={{
-            pathLength: pathLengths[11],
+            pathLength: pathLengthMotion[11],
           }}
           transition={transition}
           stroke="currentColor"
           strokeWidth="3"
           fill="none"
         />
-      </svg>
+      </motion.svg>
     </section>
   );
 };
