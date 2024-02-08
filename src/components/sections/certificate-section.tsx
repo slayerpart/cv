@@ -1,8 +1,8 @@
-import { RESUME_DATA } from "@/data/resume-data";
-import { Button } from "../ui/button";
-import { Card, CardHeader, CardContent } from "../ui/card";
-import { Section } from "../ui/section";
 import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
+import { Card, CardContent, CardHeader } from "../ui/card";
+import { Section } from "../ui/section";
+import { RESUME_DATA } from "@/data/resume-data";
 
 export const CertificateSection = () => {
   return (

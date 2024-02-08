@@ -1,4 +1,5 @@
 "use client";
+
 import { usePageScrollProgress } from "@/hooks/use-page-scroll-progress";
 
 export const NavBar = () => {

@@ -1,8 +1,8 @@
-import { RESUME_DATA } from "@/data/resume-data";
-import { Card, CardHeader, CardContent } from "../ui/card";
-import { Section } from "../ui/section";
-import Image from "next/image";
 import { Badge } from "../ui/badge";
+import { Card, CardContent, CardHeader } from "../ui/card";
+import { Section } from "../ui/section";
+import { RESUME_DATA } from "@/data/resume-data";
+import Image from "next/image";
 
 export const WorkSection = () => {
   return (

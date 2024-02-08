@@ -1,7 +1,7 @@
-import { RESUME_DATA } from "@/data/resume-data";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "../ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { RESUME_DATA } from "@/data/resume-data";
+import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 
 export const HeaderSection = () => {
   return (

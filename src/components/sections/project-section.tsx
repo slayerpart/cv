@@ -1,6 +1,6 @@
-import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "../project-card";
 import { Section } from "../ui/section";
+import { RESUME_DATA } from "@/data/resume-data";
 
 export const ProjectSection = () => {
   return (

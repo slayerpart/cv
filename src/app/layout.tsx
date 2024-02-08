@@ -1,10 +1,9 @@
-import { Analytics } from "@vercel/analytics/react";
-import { Inter } from "next/font/google";
-import type { Viewport } from "next";
-
 import "./globals.css";
-import React, { PropsWithChildren } from "react";
 import { NavBar } from "@/components/nav-bar";
+import { Analytics } from "@vercel/analytics/react";
+import type { Viewport } from "next";
+import { Inter } from "next/font/google";
+import React, { PropsWithChildren } from "react";
 
 const inter = Inter({
   subsets: ["latin"],

@@ -1,5 +1,6 @@
 "use client";
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const transition = {
   duration: 0,

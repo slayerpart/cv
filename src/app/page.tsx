@@ -1,16 +1,16 @@
-import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
-import { Metadata } from "next";
-import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
-import { DrawSignature } from "@/components/ui/draw-signature";
 import {
-  HeaderSection,
-  WorkSection,
   CertificateSection,
   EducationSection,
+  HeaderSection,
   ProjectSection,
+  WorkSection,
 } from "@/components/sections";
+import { Badge } from "@/components/ui/badge";
+import { DrawSignature } from "@/components/ui/draw-signature";
+import { Section } from "@/components/ui/section";
+import { RESUME_DATA } from "@/data/resume-data";
+import { Metadata } from "next";
 
 export const metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,

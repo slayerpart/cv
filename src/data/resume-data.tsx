@@ -1,12 +1,12 @@
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import {
-  NordLayerLogo,
-  NordSecurityLogo,
-  NexenioLogo,
-  HPILogo,
   BdriveLogo,
   DEAIcon,
+  HPILogo,
+  NexenioLogo,
+  NordLayerLogo,
+  NordSecurityLogo,
 } from "@/images/logos";
-import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "Marvin Gorecki",
