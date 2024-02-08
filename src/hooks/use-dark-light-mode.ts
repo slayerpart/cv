@@ -1,5 +1,5 @@
 import { getCookie, setCookie } from "cookies-next";
-import { useCallback, useLayoutEffect, useMemo, useState } from "react";
+import { useCallback, useLayoutEffect, useState } from "react";
 
 export const MODE = { LIGHT: "light", DARK: "dark" } as const;
 export type DarkLightMode = (typeof MODE)[keyof typeof MODE];
@@ -30,11 +30,23 @@ const setMode = (mode: DarkLightMode) => {
 export const useDarkLightMode = () => {
   const [darkLightMode, setDarkLightMode] = useState<DarkLightMode>();
 
-  const darkMode = useMemo(() => getCookie("darkMode") ?? "false", []);
-
   useLayoutEffect(() => {
+    console.log(
+      'window.matchMedia("(prefers-color-scheme: dark)").matches',
+      window.matchMedia("(prefers-color-scheme: dark)").matches,
+    );
+
+    console.log(
+      'window.matchMedia("(prefers-color-scheme: light)").matches',
+      window.matchMedia("(prefers-color-scheme: light)").matches,
+    );
+    const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "true"
+      : window.matchMedia("(prefers-color-scheme: light)").matches
+        ? "false"
+        : getCookie("darkMode") ?? "false";
     setDarkLightMode(darkMode === "true" ? MODE.DARK : MODE.LIGHT);
-  }, [darkMode]);
+  }, []);
 
   const toggleDarkLightMode = useCallback(() => {
     const switchMode = () => {
