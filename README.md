@@ -1,6 +1,6 @@
-![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
+<kbd><img src="public/cv-page-screenshot-light.jpeg" style="border-radius: 4px;" alt="cv" /></kbd>
 
-# Minimalist CV [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBartoszJarocki%2Fcv)
+# Minimalist CV
 
 Simple web app that renders minimalist CV with print-friendly layout.
 
@@ -8,10 +8,11 @@ Built with Next.js and shadcn/ui, deployed on Vercel.
 
 # Features
 
-- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
 - Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
 - Auto generated Layout
 - Responsive for different devices
+- Light/Dark mode support
+- Print-friendly
 - Optimized for Next.js and Vercel
 
 # Getting Started Locally
@@ -19,7 +20,7 @@ Built with Next.js and shadcn/ui, deployed on Vercel.
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/BartoszJarocki/cv.git
+   git clone https://github.com/slayerpart/cv.git
    ```
 
 2. Move to the cloned directory
@@ -46,19 +47,19 @@ Built with Next.js and shadcn/ui, deployed on Vercel.
 
 Build the container
 
-```
+```sh
 docker compose build
 ```
 
 Run the container
 
-```
+```sh
 docker compose up -d
 ```
 
 Stop the Container
 
-```
+```sh
 docker compose down
 ```
 
