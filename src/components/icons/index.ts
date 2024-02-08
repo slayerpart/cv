@@ -1,5 +1,6 @@
-import { GitHubIcon } from "./GitHubIcon";
-import { LinkedInIcon } from "./LinkedInIcon";
-import { NordLayerIcon } from "./NordLayerIcon";
+import { ThemeSwitcherIcon } from "./dark-light-mode-icon";
+import { GitHubIcon } from "./github-icon";
+import { LinkedInIcon } from "./linkedin-icon";
+import { NordLayerIcon } from "./nord-layer-icon";
 
-export { GitHubIcon, LinkedInIcon, NordLayerIcon };
+export { ThemeSwitcherIcon, GitHubIcon, LinkedInIcon, NordLayerIcon };

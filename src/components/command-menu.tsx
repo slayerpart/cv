@@ -1,5 +1,7 @@
 "use client";
 
+import { useDarkLightMode } from "../hooks/use-dark-light-mode";
+import { DarkLightModeIcon } from "./icons/dark-light-mode-icon";
 import { Button } from "./ui/button";
 import {
   CommandDialog,
@@ -10,8 +12,9 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
+import { useRegisterHotkey } from "@/hooks/use-register-hotkey";
 import { CommandIcon } from "lucide-react";
-import * as React from "react";
+import React, { useState } from "react";
 
 interface Props {
   links: { url: string; title: string }[];
@@ -19,28 +22,31 @@ interface Props {
 }
 
 export const CommandMenu = ({ links, certificates }: Props) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const { darkLightMode, toggleDarkLightMode } = useDarkLightMode();
 
-  React.useEffect(() => {
-    const down = (e: KeyboardEvent) => {
-      if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault();
-        setOpen((open) => !open);
-      }
-    };
-
-    document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
-  }, []);
+  useRegisterHotkey([
+    {
+      condition: (e: KeyboardEvent) =>
+        e.key === "k" && (e.metaKey || e.ctrlKey),
+      callback: toggleDarkLightMode,
+    },
+    {
+      condition: (e: KeyboardEvent) =>
+        e.key === "j" && (e.metaKey || e.ctrlKey),
+      callback: () => setOpen((open) => !open),
+    },
+  ]);
 
   return (
     <>
-      <p className="fixed bottom-0 left-0 right-0 hidden border-t border-t-muted bg-white p-1 text-center text-sm text-muted-foreground print:hidden xl:block">
-        Press{" "}
+      <p className="fixed bottom-0 left-0 right-0 hidden border-t border-t-muted bg-background p-1 text-center text-sm text-muted-foreground print:hidden xl:flex xl:align-center xl:justify-center gap-2">
         <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-          <span className="text-xs">⌘</span>J
-        </kbd>{" "}
-        to open the command menu
+          <span className="text-xs">⌘</span>J Menu
+        </kbd>
+        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+          <span className="text-xs">⌘</span>K Theme
+        </kbd>
       </p>
       <Button
         onClick={() => setOpen((open) => !open)}
@@ -49,6 +55,14 @@ export const CommandMenu = ({ links, certificates }: Props) => {
         className="fixed bottom-4 right-4 flex rounded-full shadow-2xl print:hidden xl:hidden"
       >
         <CommandIcon className="my-6 size-6" />
+      </Button>
+      <Button
+        onClick={toggleDarkLightMode}
+        variant="outline"
+        size="icon"
+        className="fixed bottom-16 right-4 p-2 flex rounded-full shadow-2xl print:hidden "
+      >
+        <DarkLightModeIcon mode={darkLightMode} />
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
@@ -63,6 +77,12 @@ export const CommandMenu = ({ links, certificates }: Props) => {
             >
               <span>Print</span>
             </CommandItem>
+            <CommandItem onSelect={toggleDarkLightMode}>
+              <span>
+                Toggle {darkLightMode === "light" ? "dark" : "light"} mode
+              </span>
+            </CommandItem>
+
             {certificates.map(({ verification, abbreviation }) => (
               <CommandItem
                 key={abbreviation}

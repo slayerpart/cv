@@ -59,7 +59,7 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+      <section className="mx-auto w-full max-w-2xl space-y-8 bg-background print:space-y-6">
         <HeaderSection />
         <Section>
           <h2 className="text-xl font-bold">About</h2>
@@ -87,7 +87,6 @@ export default function Page() {
           <DrawSignature />
         </Section>
       </section>
-
       <CommandMenu
         links={[
           {
