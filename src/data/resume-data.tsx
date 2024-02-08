@@ -20,6 +20,7 @@ import {
   NordSecurityLogo,
   NexenioLogo,
   HPILogo,
+  BdriveLogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
@@ -53,6 +54,8 @@ export const RESUME_DATA = {
   education: [
     {
       school: "Hasso Plattner Institute",
+      url: "https://hpi.de/en/",
+      logo: HPILogo,
       degree: "IT Systems Engineering M.Sc.",
       grade: "discontinued",
       focus: "Information security",
@@ -61,6 +64,8 @@ export const RESUME_DATA = {
     },
     {
       school: "Hasso Plattner Institute",
+      logo: HPILogo,
+      url: "https://hpi.de/en/",
       degree: "IT Systems Engineering B.Sc.",
       grade: "1.5",
       start: "2013",
@@ -68,6 +73,7 @@ export const RESUME_DATA = {
     },
     {
       school: "Albert-Schweitzer-Gymnasium",
+      url: "https://www.asg-ehst.de/",
       degree: "A-Levels",
       grade: "1.3",
       start: "2010",
@@ -200,18 +206,51 @@ export const RESUME_DATA = {
     "Vite",
     "Jest",
     "RTL",
+    "Storybook",
+    "Cypress",
     "Core Web Vitals",
     "CI/CD",
   ],
   projects: [
     {
       title: "NordLayer",
-      techStack: ["TypeScript", "Vite", "Vitest", "Cypress", "RTL"],
-      description: "A platform to build and grow your online business",
       logo: NordLayerLogo,
+      description:
+        "NordLayer provides flexible and easy-to-implement cybersecurity tools for a business of any size or work model.",
+      techStack: [
+        "TypeScript",
+        "React",
+        "React Query",
+        "Vite",
+        "Vitest",
+        "Cypress",
+        "RTL",
+        "Storybook",
+      ],
       link: {
         label: "nordlayer.com",
         href: "https://nordlayer.com/",
+      },
+    },
+    {
+      title: "Bdrive",
+      logo: BdriveLogo,
+      description:
+        "Bdrive uses high-end encryption and fragmentation (RAID-technology) to securely store and share documents.",
+      techStack: [
+        "TypeScript",
+        "WebAssembly",
+        "React",
+        "Redux",
+        "Redux Saga",
+        "Webpack",
+        "Jest",
+        "Cypress",
+        "RTL",
+      ],
+      link: {
+        label: "Bdrive Security Whitepaper",
+        href: "https://www.datocms-assets.com/9477/1574811850-bdrive-security-whitepaper-en.pdf",
       },
     },
   ],
