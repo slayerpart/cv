@@ -32,16 +32,33 @@ export async function GET() {
             background: "linear-gradient(to right, #58AEF1, #ec4899)",
           }}
         />
-        <img
-          width="512"
-          height="512"
-          src={`https://github.com/slayerpart.png`}
-          alt="Profile Picture"
+        <div
           style={{
-            borderRadius: 32,
-            boxShadow: "3px 3px 15px #f6f6f610",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 32,
           }}
-        />
+        >
+          <img
+            width="256"
+            height="256"
+            src={`https://github.com/slayerpart.png`}
+            alt="Profile Picture"
+            style={{
+              borderRadius: 32,
+              boxShadow: "3px 3px 15px #d4d4d410",
+            }}
+          />
+          <span
+            style={{
+              width: 1.5,
+              height: 192,
+              backgroundColor: "#d4d4d4D0",
+            }}
+          />
+          <p style={{ fontSize: 128, color: "#d4d4d4D0" }}>CV</p>
+        </div>
       </div>
     ),
     {
