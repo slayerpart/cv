@@ -15,6 +15,11 @@ const transition = {
   ease: "linear",
 } as const;
 
+const ranges = distributeRange({
+  weights: [2, 3, 1, 4, 2, 2, 2, 2, 2, 2, 1, 2],
+  range: [0.25, 1],
+});
+
 export const DrawSignature = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -25,11 +30,6 @@ export const DrawSignature = () => {
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     console.log("Page scroll: ", latest);
   });
-
-  const ranges = distributeRange(
-    [2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2] as const,
-    [0.4, 1] as const,
-  );
 
   const pathLengthMotion = [
     useTransform(scrollYProgress, ranges[0], [0, 1]),
@@ -46,11 +46,11 @@ export const DrawSignature = () => {
     useTransform(scrollYProgress, ranges[11], [0, 1]),
   ] as const;
 
-  const slideDownMotion = useTransform(scrollYProgress, [0, 1], [-30, 0]);
+  const slideDownMotion = useTransform(scrollYProgress, [0, 1], [-50, 0]);
 
   return (
     <Section
-      className="scroll-mb-16 flex items-center justify-center p-16 pb-32 print:hidden"
+      className="scroll-mb-16 flex items-center justify-center p-14 pb-32 print:hidden"
       ref={sectionRef}
       aria-hidden
     >

@@ -12,10 +12,13 @@ export function cn(...inputs: ClassValue[]) {
  * @param range - A tuple representing the range to be distributed.
  * @returns An array of tuples representing the distributed ranges.
  */
-export function distributeRange(
-  weights: readonly number[],
-  range: readonly [number, number],
-) {
+export function distributeRange({
+  weights,
+  range,
+}: {
+  weights: readonly number[];
+  range: readonly [number, number];
+}) {
   const totalWeight = weights.reduce((acc, weight) => acc + weight, 0);
   const totalRange = Math.abs(range[1] - range[0]);
   const result: Array<[number, number]> = [];

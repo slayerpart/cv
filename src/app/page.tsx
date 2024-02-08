@@ -85,27 +85,6 @@ export default function Page() {
         </Section>
         <ProjectSection />
       </section>
-      <footer>
-        <DrawSignature />
-        <CommandMenu
-          links={[
-            {
-              url: RESUME_DATA.personalWebsiteUrl,
-              title: "Personal Website",
-            },
-            ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-              url: socialMediaLink.url,
-              title: socialMediaLink.name,
-            })),
-          ]}
-          certificates={RESUME_DATA.certificates.map(
-            ({ verification, abbreviation }) => ({
-              verification,
-              abbreviation,
-            }),
-          )}
-        />
-      </footer>
     </main>
   );
 }

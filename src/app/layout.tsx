@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Footer } from "@/components/footer";
 import { NavBar } from "@/components/nav-bar";
 import { Analytics } from "@vercel/analytics/react";
 import type { Viewport } from "next";
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body>
         <NavBar />
         {children}
+        <Footer />
       </body>
       <Analytics />
     </html>
