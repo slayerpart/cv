@@ -15,9 +15,9 @@ export const RESUME_DATA = {
   location: "Berlin, Germany, CET",
   locationLink: "https://www.google.com/maps/place/Berlin",
   about:
-    "Frontend Engineer focused on building accessible user interfaces with extra attention to UX",
+    "Frontend Engineer focused on building accessible user interfaces with extra attention to UX and security",
   summary:
-    "As a Frontend Engineer and Technical Lead, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
+    "As a Technical Lead and Frontend Engineer, my commitment to crafting seamless user experiences, prioritizing robust usability, and upholding stringent security standards has driven me to lead teams and make strategic technical decisions, fostering the growth of various web applications. As a passionate TypeScript advocate, I am dedicated to leveraging the power of TypeScript to enhance the development process, foster robustness, and elevate the overall quality of code.",
   avatarUrl: "https://avatars.githubusercontent.com/u/6815357?v=4",
   personalWebsiteUrl: "https://gorecki.cc",
   contact: {
@@ -199,6 +199,7 @@ export const RESUME_DATA = {
     "Cypress",
     "Core Web Vitals",
     "CI/CD",
+    "OWASP",
   ],
   projects: [
     {
