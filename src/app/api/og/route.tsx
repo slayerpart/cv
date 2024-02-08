@@ -39,7 +39,7 @@ export async function GET() {
           alt="Profile Picture"
           style={{
             borderRadius: 32,
-            boxShadow: "3px 3px 20px #f6f6f620",
+            boxShadow: "3px 3px 15px #f6f6f610",
           }}
         />
       </div>

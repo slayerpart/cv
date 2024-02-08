@@ -39,6 +39,19 @@ export const metadata: Metadata = {
     apple: ["/static/apple-touch-icon.png?v=4"],
     shortcut: ["/static/apple-touch-icon.png"],
   },
+  openGraph: {
+    images: [
+      {
+        url: "/api/og",
+        width: 1200,
+        height: 630,
+        alt: `Marvin Gorecki's CV`,
+        type: "image/png",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function Page() {
