@@ -30,10 +30,10 @@ export function ProjectCard({
     <Card className="flex flex-col overflow-hidden border border-muted p-3">
       <CardHeader className="">
         <div className="space-y-1">
-          <CardTitle className="flex text-base">
+          <CardTitle className="flex items-center text-base">
             {logo && (
               <Image
-                className="mr-1 flex-shrink-0 self-start"
+                className="mr-1 flex-shrink-0"
                 src={logo}
                 alt={`${title} logo`}
                 height={24}

@@ -4,6 +4,7 @@ import NexenioLogo from "./nexenio.png";
 import HPILogo from "./hpi.svg";
 import BdriveLogo from "./bdrive.svg";
 import DEAIcon from "./dea-icon.png";
+import IDPLogo from "./idp.png";
 
 export {
   NordLayerLogo,
@@ -11,5 +12,6 @@ export {
   NexenioLogo,
   HPILogo,
   BdriveLogo,
+  IDPLogo,
   DEAIcon,
 };

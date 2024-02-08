@@ -1,27 +1,11 @@
 import {
-  AmbitLogo,
-  BarepapersLogo,
-  BimLogo,
-  CDGOLogo,
-  ClevertechLogo,
-  ConsultlyLogo,
-  EvercastLogo,
-  Howdy,
-  JarockiMeLogo,
-  JojoMobileLogo,
-  Minimal,
-  MobileVikingsLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
-  TastyCloudLogo,
-  YearProgressLogo,
   NordLayerLogo,
   NordSecurityLogo,
   NexenioLogo,
   HPILogo,
   BdriveLogo,
   DEAIcon,
+  IDPLogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
@@ -91,7 +75,7 @@ export const RESUME_DATA = {
       start: "12/2022",
       end: "now",
       description:
-        "Accountable for technical product decisions, led team of 3 FE engineers and came up with their individual development plans, improved core web vitals of various web apps, sped up CI pipelines and introduced automated transitive dependency vulnerability detection.",
+        "Accountable for strategic technical product decisions, guide and mentor a team of three Frontend Engineers with tailored development plans, enhance core web vitals across diverse web applications, optimize CI pipelines for efficiency, and implement automated detection of transitive dependency vulnerabilities.",
       technologies: [
         "React",
         "TypeScript",
@@ -110,7 +94,7 @@ export const RESUME_DATA = {
       start: "04/2022",
       end: "12/2022",
       description:
-        "Implemented new product features, design system and worked on improving the way developers ship the code. Taught advanced TypeScript concepts to colleagues.",
+        "Implement product features, a comprehensible design system and improve the way developers ship the code. Additionally, I conduct knowledge-sharing sessions, teaching colleagues advanced TypeScript concepts to foster skill development within the team.",
       technologies: [
         "React",
         "TypeScript",
@@ -128,7 +112,8 @@ export const RESUME_DATA = {
       logo: NexenioLogo,
       start: "04/2020",
       end: "03/2022",
-      description: "",
+      description:
+        "Responsible for the implementation of Bdrive product features, integrating WebAssembly-based encryption and decryption fallbacks, polyfilling the Web Crypto API, and designing user-centric entropy sourcing UI. Additionally, I am accountable for the implementation of a custom identity provider service.",
       technologies: [
         "React",
         "TypeScript",
@@ -146,7 +131,8 @@ export const RESUME_DATA = {
       logo: NexenioLogo,
       start: "04/2017",
       end: "03/2020",
-      description: "",
+      description:
+        "Responsible for the implementation of Bdrive product features, encompassing the creation of a comprehensive design system and crafting intuitive up-/download UI visualizations, conveying the use of end-to-end encryption to securely share files.",
       technologies: [
         "React",
         "TypeScript",
@@ -164,20 +150,20 @@ export const RESUME_DATA = {
       start: "04/2016",
       end: "03/2017",
       description:
-        "Developed and maintained internal internal tool to leverage machine learning algorithms with tagged input data",
+        "Implement internal tools designed to leverage the power of machine learning algorithms through curated tagged input data, ensuring streamlined utilization within the organizational framework.",
       technologies: ["React", "Flow", "Redux", "Styled Components"],
     },
     {
       company: "Information Systems Research Group",
       link: "https://hpi.de/naumann/home.html",
       badges: [],
-      title: "Student Assistant",
+      title: "Student Research Assistant",
       logo: HPILogo,
       start: "04/2014",
       end: "03/2016",
       description:
-        "Implement an automated data scraping and aggregation system integrating multiple heterogeneous public data sets to uncover the bigger picture.",
-      technologies: ["Python", "Scrapy", "AWS", "React"],
+        "Implement an automated data scraping and aggregation system that seamlessly integrates diverse public datasets, unveiling a comprehensive perspective.",
+      technologies: ["Python", "Scrapy", "AWS", "MongoDB", "AngularJS"],
     },
   ],
   certificates: [
@@ -188,7 +174,7 @@ export const RESUME_DATA = {
       url: "https://uxqcc.com/uxcertifications/foundation-level/",
       verification: {
         url: "https://www.gasq.org/en/certification/check-a-certificate.html",
-        details: "Number of Certificate: 210255, Last Name: Gorecki",
+        details: "Certificate ID: 210255, Last Name: Gorecki",
       },
       badges: ["Foundation Level"],
       institution: "UXQCC - User Experience Quality Certification Center",
@@ -222,6 +208,7 @@ export const RESUME_DATA = {
         "NordLayer provides flexible and easy-to-implement cybersecurity tools for a business of any size or work model.",
       active: true,
       techStack: [
+        "Next.js",
         "TypeScript",
         "React",
         "React Query",
@@ -240,7 +227,7 @@ export const RESUME_DATA = {
       title: "Bdrive",
       logo: BdriveLogo,
       description:
-        "Bdrive uses high-end encryption and fragmentation (RAID-technology) to securely store and share documents.",
+        "Bdrive employs cutting-edge encryption and fragmentation (RAID technology) to ensure the secure storage and seamless sharing of documents.",
       active: false,
       techStack: [
         "TypeScript",
@@ -259,15 +246,35 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Digital Registration on Entry for Germany",
+      title: "IDP",
+      logo: IDPLogo,
+      description:
+        "IDP functions as a tailor-made identity provider service developed for the Bundesdruckerei, the federal institution entrusted with the production of items such as banknotes and passports.",
+      active: false,
+      techStack: ["TypeScript", "React", "Redux", "Webpack", "Jest", "Karma"],
+    },
+    {
+      title: "DEA",
       logo: DEAIcon,
       description:
-        "Upload portal for Digital Entry Registration for Germany. The portal was used by travelers to upload their health declaration form including vaccination, test or recovery certificates.",
+        "Digital Entry Registration Upload Portal for Germany: Enabling Travelers to Submit Covid-Related Certificates of Vaccination, Testing, or Recovery.",
       active: false,
-      techStack: ["TypeScript", "Vue", "Webpack", "Jest"],
+      techStack: ["TypeScript", "Vue", "Webpack", "Karma"],
       link: {
         label: "Digital procedure for registration upon entry press release",
         href: "https://www.bmi.bund.de/SharedDocs/pressemitteilungen/EN/2020/11/digitale-einreiseanmeldung-dea-en.html",
+      },
+    },
+    {
+      title: "Contagion",
+      logo: HPILogo,
+      description:
+        "Advanced Analytical Exploration Tools for Semantic Company Networks Utilizing Public Knowledge Bases.",
+      active: false,
+      techStack: ["React", "Python", "Scrapy", "MongoDB", "Neo4j", "AWS"],
+      link: {
+        label: "Contagion project site",
+        href: "https://hpi.de/naumann/teaching/bachelorprojekte/unternehmensnetzwerke.html",
       },
     },
   ],
