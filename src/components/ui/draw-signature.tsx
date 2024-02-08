@@ -1,12 +1,10 @@
 "use client";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
-import { cn } from "@/lib/utils";
-import { useRef } from "react";
 
 const transition = {
   duration: 0,
   ease: "linear",
-};
+} as const;
 
 export const DrawSignature = () => {
   const { scrollYProgress } = useScroll();
@@ -24,7 +22,7 @@ export const DrawSignature = () => {
     useTransform(scrollYProgress, [0.98, 0.988], [0, 1]),
     useTransform(scrollYProgress, [0.988, 0.995], [0, 1]),
     useTransform(scrollYProgress, [0.995, 1], [0, 1]),
-  ];
+  ] as const;
 
   return (
     <section aria-hidden className="flex w-64 items-center justify-center">
