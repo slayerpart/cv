@@ -148,7 +148,7 @@ export default function Page() {
                     <h3 className="inline-flex  items-center justify-start gap-x-1 font-semibold leading-none">
                       <a
                         title={work.company}
-                        className="truncate hover:underline"
+                        className="truncate py-0.5 hover:underline"
                         href={work.link}
                       >
                         {work.company}
