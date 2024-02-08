@@ -50,7 +50,7 @@ export const DrawSignature = () => {
 
   return (
     <Section
-      className="flex items-center justify-center p-14 pb-32 print:hidden"
+      className="flex items-center justify-center p-14 pb-24 print:hidden"
       ref={sectionRef}
       aria-hidden
     >
