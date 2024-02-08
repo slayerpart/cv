@@ -39,6 +39,7 @@ export const metadata = {
     apple: ["/static/apple-touch-icon.png?v=4"],
     shortcut: ["/static/apple-touch-icon.png"],
   },
+  metadataBase: new URL(process.env.URL),
   openGraph: {
     title: `${RESUME_DATA.name} | CV`,
     description: RESUME_DATA.about,
