@@ -56,7 +56,8 @@ export const HeaderSection = () => {
               <span className="underline">{RESUME_DATA.contact.email}</span>
             </a>
           ) : null}
-          {RESUME_DATA.contact.tel ? (
+          {"tel" in RESUME_DATA.contact &&
+          typeof RESUME_DATA.contact.tel === "string" ? (
             <a href={`tel:${RESUME_DATA.contact.tel}`}>
               <span className="underline">{RESUME_DATA.contact.tel}</span>
             </a>
