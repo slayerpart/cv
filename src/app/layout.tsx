@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,11 +16,7 @@ const inter = Inter({
   display: "swap",
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={inter.className}>
       <body>{children}</body>
