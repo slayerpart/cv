@@ -29,7 +29,7 @@ export const HeaderSection = () => {
               </a>
             </Button>
           ) : null}
-          {RESUME_DATA.contact.tel ? (
+          {"tel" in RESUME_DATA.contact ? (
             <Button className="size-8" variant="outline" size="icon" asChild>
               <a href={`tel:${RESUME_DATA.contact.tel}`}>
                 <PhoneIcon className="size-4" />

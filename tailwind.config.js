@@ -18,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        progress: "var(--progress)",
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",

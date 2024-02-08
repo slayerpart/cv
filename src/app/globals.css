@@ -24,7 +24,7 @@
     --input: hsl(20 5.9% 90%);
     --ring: hsl(20 14.3% 4.1%);
     --radius: 0.5rem;
-    --progress: hsl(48, 29%, 44%);
+    --progress: hsl(48, 87%, 65%);
   }
 
   .dark {
@@ -47,7 +47,7 @@
     --border: hsl(12 6.5% 15.1%);
     --input: hsl(12 6.5% 15.1%);
     --ring: hsl(24 5.7% 82.9%);
-    --progress: hsl(48, 29%, 44%);
+    --progress: hsl(0, 62%, 52%);
   }
 }
 
