@@ -5,7 +5,6 @@ import {
   HPILogo,
   BdriveLogo,
   DEAIcon,
-  IDPLogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
@@ -237,14 +236,6 @@ export const RESUME_DATA = {
         label: "Bdrive Security Whitepaper",
         href: "https://www.datocms-assets.com/9477/1574811850-bdrive-security-whitepaper-en.pdf",
       },
-    },
-    {
-      title: "IDP",
-      logo: IDPLogo,
-      description:
-        "IDP functions as a tailor-made identity provider service developed for the Bundesdruckerei, the federal institution entrusted with the production of items such as banknotes and passports.",
-      active: false,
-      techStack: ["TypeScript", "React", "Redux", "Webpack", "Jest", "Karma"],
     },
     {
       title: "DEA",
