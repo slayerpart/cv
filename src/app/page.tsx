@@ -153,7 +153,12 @@ export default function Page() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
+                <CardContent className="mt-2 flex justify-between">
+                  {education.degree}
+                  <Badge variant="secondary" className="align-middle text-xs">
+                    {education.grade}
+                  </Badge>
+                </CardContent>
               </Card>
             );
           })}
