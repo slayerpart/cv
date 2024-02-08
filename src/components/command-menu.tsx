@@ -16,9 +16,10 @@ import { CommandIcon } from "lucide-react";
 
 interface Props {
   links: { url: string; title: string }[];
+  certificates: { verification?: { url: string }; abbreviation: string }[];
 }
 
-export const CommandMenu = ({ links }: Props) => {
+export const CommandMenu = ({ links, certificates }: Props) => {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -63,6 +64,19 @@ export const CommandMenu = ({ links }: Props) => {
             >
               <span>Print</span>
             </CommandItem>
+            {certificates.map(({ verification, abbreviation }) => (
+              <CommandItem
+                key={abbreviation}
+                onSelect={() => {
+                  setOpen(false);
+                  if (verification) {
+                    window.open(verification.url, "_blank");
+                  }
+                }}
+              >
+                <span>Verify {abbreviation} certificate</span>
+              </CommandItem>
+            ))}
           </CommandGroup>
           <CommandGroup heading="Links">
             {links.map(({ url, title }) => (

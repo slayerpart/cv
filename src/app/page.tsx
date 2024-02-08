@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import Image from "next/image";
+import { Certificate } from "crypto";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -254,7 +255,11 @@ export default function Page() {
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
+              return (
+                <Badge variant="secondary" key={skill}>
+                  {skill}
+                </Badge>
+              );
             })}
           </div>
         </Section>
@@ -289,6 +294,9 @@ export default function Page() {
             title: socialMediaLink.name,
           })),
         ]}
+        certificates={RESUME_DATA.certificates.map(
+          ({ verification, abbreviation }) => ({ verification, abbreviation }),
+        )}
       />
     </main>
   );
