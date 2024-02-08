@@ -133,6 +133,19 @@ export default function Page() {
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">
                   {work.description}
+                  <div className="my-3 flex flex-wrap gap-1">
+                    {work.technologies.map((technology) => {
+                      return (
+                        <Badge
+                          className="text-xs"
+                          variant="outline"
+                          key={technology}
+                        >
+                          {technology}
+                        </Badge>
+                      );
+                    })}
+                  </div>
                 </CardContent>
               </Card>
             );
@@ -153,7 +166,7 @@ export default function Page() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2 flex justify-between">
+                <CardContent className="mt-2 flex flex-wrap justify-between gap-2">
                   {education.degree}
                   <Badge variant="secondary" className="align-middle text-xs">
                     {education.grade}
