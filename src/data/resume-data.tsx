@@ -56,14 +56,6 @@ export const RESUME_DATA = {
       start: "2013",
       end: "2017",
     },
-    {
-      school: "Albert-Schweitzer-Gymnasium",
-      url: "https://www.asg-ehst.de/",
-      degree: "A-Levels",
-      grade: "1.3",
-      start: "2010",
-      end: "2012",
-    },
   ],
   work: [
     {
@@ -94,7 +86,7 @@ export const RESUME_DATA = {
       start: "04/2022",
       end: "12/2022",
       description:
-        "Implement product features, a comprehensible design system and improve the way developers ship the code. Additionally, I conduct knowledge-sharing sessions, teaching colleagues advanced TypeScript concepts to foster skill development within the team.",
+        "Implement product features, a comprehensible design system and improved the way developers ship the code. Additionally, I conducted knowledge-sharing sessions, teaching colleagues advanced TypeScript concepts to foster skill development within the team.",
       technologies: [
         "React",
         "TypeScript",
@@ -113,7 +105,7 @@ export const RESUME_DATA = {
       start: "04/2020",
       end: "03/2022",
       description:
-        "Responsible for the implementation of Bdrive product features, integrating WebAssembly-based encryption and decryption fallbacks, polyfilling the Web Crypto API, and designing user-centric entropy sourcing UI. Additionally, I am accountable for the implementation of a custom identity provider service.",
+        "Responsible for the implementation of Bdrive product features, integrating WebAssembly-based encryption and decryption fallbacks, polyfilling the Web Crypto API, and designing user-centric entropy sourcing UI. Additionally, I was accountable for the implementation of a custom identity provider service.",
       technologies: [
         "React",
         "TypeScript",
@@ -150,7 +142,7 @@ export const RESUME_DATA = {
       start: "04/2016",
       end: "03/2017",
       description:
-        "Implement internal tools designed to leverage the power of machine learning algorithms through curated tagged input data, ensuring streamlined utilization within the organizational framework.",
+        "Implemented internal tools designed to leverage the power of machine learning algorithms through curated tagged input data, ensuring streamlined utilization within the organizational framework.",
       technologies: ["React", "Flow", "Redux", "Styled Components"],
     },
     {
@@ -162,7 +154,7 @@ export const RESUME_DATA = {
       start: "04/2014",
       end: "03/2016",
       description:
-        "Implement an automated data scraping and aggregation system that seamlessly integrates diverse public datasets, unveiling a comprehensive perspective.",
+        "Crafted an automated data scraping and aggregation system that seamlessly integrates diverse public datasets, unveiling a comprehensive perspective.",
       technologies: ["Python", "Scrapy", "AWS", "MongoDB", "AngularJS"],
     },
   ],
