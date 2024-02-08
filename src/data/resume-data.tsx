@@ -16,12 +16,11 @@ export const RESUME_DATA = {
   about:
     "Frontend Engineer focused on building accessible user interfaces with extra attention to UX and security",
   summary:
-    "As a Technical Lead and Frontend Engineer, my commitment to crafting seamless user experiences, prioritizing robust usability, and upholding stringent security standards has driven me to lead teams and make strategic technical decisions, fostering the growth of various web applications. As a passionate TypeScript advocate, I am dedicated to leveraging the power of TypeScript to enhance the development process, foster robustness, and elevate the overall quality of code.",
+    "As a Technical Lead and Frontend Engineer, my commitment to crafting seamless user experiences, prioritizing robust usability, and upholding stringent security standards has driven me to lead teams and make strategic technical decisions, nurturing growth of various web applications. As a dedicated TypeScript advocate, I leverage its power to enhance development, foster robustness, and elevate code quality.",
   avatarUrl: "https://avatars.githubusercontent.com/u/6815357?v=4",
   personalWebsiteUrl: "https://gorecki.cc",
   contact: {
     email: "marvin@gorecki.cc",
-    tel: "+491774424396",
     social: [
       {
         name: "GitHub",
@@ -66,7 +65,7 @@ export const RESUME_DATA = {
       start: "12/2022",
       end: "now",
       description:
-        "Accountable for strategic technical product decisions, guide and mentor a team of three Frontend Engineers with tailored development plans, enhance core web vitals across diverse web applications, optimize CI pipelines for efficiency, and implement automated detection of transitive dependency vulnerabilities.",
+        "Responsible for strategic technical product decisions, I mentor a team of three Frontend Engineers with tailored development plans, improve core web vitals across diverse applications, optimize CI pipelines for productivity, and automate the detection of transitive dependency vulnerabilities.",
       technologies: [
         "React",
         "TypeScript",
@@ -85,7 +84,7 @@ export const RESUME_DATA = {
       start: "04/2022",
       end: "12/2022",
       description:
-        "Implement product features, a comprehensible design system and improved the way developers ship the code. Additionally, I conducted knowledge-sharing sessions, teaching colleagues advanced TypeScript concepts to foster skill development within the team.",
+        "I implemented product features, developed a comprehensible design system, and streamline code deployment processes for developers. Additionally, I led knowledge-sharing sessions, imparting advanced TypeScript concepts to foster skill development within the team.",
       technologies: [
         "React",
         "TypeScript",
@@ -104,7 +103,7 @@ export const RESUME_DATA = {
       start: "04/2020",
       end: "03/2022",
       description:
-        "Responsible for the implementation of Bdrive product features, integrating WebAssembly-based encryption and decryption fallbacks, polyfilling the Web Crypto API, and designing user-centric entropy sourcing UI. Additionally, I was accountable for the implementation of a custom identity provider service.",
+        "Responsible for Bdrive's product feature implementation, I integrated WebAssembly-based encryption and decryption fallbacks to polyfill the Web Crypto API. Additionally, I crafted a user-based entropy sourcing UI and was accountable for implementing a custom identity provider service.",
       technologies: [
         "React",
         "TypeScript",
@@ -123,7 +122,7 @@ export const RESUME_DATA = {
       start: "04/2017",
       end: "03/2020",
       description:
-        "Responsible for the implementation of Bdrive product features, encompassing the creation of a comprehensive design system and crafting intuitive up-/download UI visualizations, conveying the use of end-to-end encryption to securely share files.",
+        "Responsible for Bdrive's product feature implementation, I oversaw the development of a comprehensive design system and created intuitive up-/download UI visualizations. These visualizations effectively conveyed the use of end-to-end encryption for securely sharing files.",
       technologies: [
         "React",
         "TypeScript",
@@ -153,7 +152,7 @@ export const RESUME_DATA = {
       start: "04/2014",
       end: "03/2016",
       description:
-        "Crafted an automated data scraping and aggregation system that seamlessly integrates diverse public datasets, unveiling a comprehensive perspective.",
+        "Designed and implemented an automated data scraping and aggregation system capable of seamlessly integrating a variety of public datasets. This system provides a comprehensive perspective by combining and organizing data from multiple sources, enhancing the decision-making process.",
       technologies: ["Python", "Scrapy", "AWS", "MongoDB", "AngularJS"],
     },
   ],
@@ -185,8 +184,8 @@ export const RESUME_DATA = {
     "RTL",
     "Storybook",
     "Cypress",
-    "Core Web Vitals",
     "CI/CD",
+    "Core Web Vitals",
     "OWASP",
   ],
   projects: [
