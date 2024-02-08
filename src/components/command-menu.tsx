@@ -13,6 +13,7 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import { useRegisterHotkey } from "@/hooks/use-register-hotkey";
+import { capitalize } from "@/lib/utils";
 import { CommandIcon } from "lucide-react";
 import React, { useState } from "react";
 
@@ -79,10 +80,9 @@ export const CommandMenu = ({ links, certificates }: Props) => {
             </CommandItem>
             <CommandItem onSelect={toggleDarkLightMode}>
               <span>
-                Toggle{" "}
                 {darkLightMode && darkLightMode === MODE.DARK
-                  ? MODE.LIGHT
-                  : MODE.DARK}{" "}
+                  ? capitalize(MODE.LIGHT)
+                  : capitalize(MODE.DARK)}{" "}
                 mode
               </span>
             </CommandItem>
