@@ -10,7 +10,7 @@ describe("distributeRange", () => {
       [2, 6],
       [6, 12],
     ];
-    const result = distributeRange(weights, range);
+    const result = distributeRange({ weights, range });
     expect(result).toEqual(expected);
   });
 
@@ -18,7 +18,7 @@ describe("distributeRange", () => {
     const weights: number[] = [] as const;
     const range = [0, 10] as const;
     const expected: [number, number][] = [];
-    const result = distributeRange(weights, range);
+    const result = distributeRange({ weights, range });
     expect(result).toEqual(expected);
   });
 
@@ -30,7 +30,7 @@ describe("distributeRange", () => {
       [0, 0],
       [0, 0],
     ];
-    const result = distributeRange(weights, range);
+    const result = distributeRange({ weights, range });
     expect(result).toEqual(expected);
   });
 
@@ -42,7 +42,7 @@ describe("distributeRange", () => {
       [-6, -2],
       [-2, 0],
     ];
-    const result = distributeRange(weights, range);
+    const result = distributeRange({ weights, range });
     expect(result).toEqual(expected);
   });
 });
