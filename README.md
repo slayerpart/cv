@@ -1,4 +1,8 @@
-<kbd><img src="public/cv-page-screenshot-light.jpeg" style="border-radius: 4px;" alt="cv" /></kbd>
+<picture >
+  <source media="(prefers-color-scheme: dark)" srcset="public/cv-page-screenshot-dark.jpeg">
+  <source media="(prefers-color-scheme: light)" srcset="public/cv-page-screenshot-light.jpeg">
+  <img style="border-radius: 8px;" alt="Shows a screenshot of the whole page." src="public/cv-page-screenshot-light.jpeg">
+</picture>
 
 # Minimalist CV
 
