@@ -161,7 +161,7 @@ export const RESUME_DATA = {
       technologies: ["React", "Flow", "Redux", "Styled Components"],
     },
     {
-      company: "Information Systems Research Group, HPI",
+      company: "Information Systems Research Group",
       link: "https://hpi.de/naumann/home.html",
       badges: [],
       title: "Student Assistant",
@@ -205,7 +205,20 @@ export const RESUME_DATA = {
     //   description: "Creating and testing software for LTE base stations",
     // },
   ],
-
+  certificates: [
+    {
+      title: "Certified Professional for Usability Engineering",
+      id: "210255",
+      url: "https://uxqcc.com/uxcertifications/foundation-level/",
+      verification: {
+        url: "https://www.gasq.org/en/certification/check-a-certificate.html",
+        details: "Number of Certificate: 210255, Last Name: Gorecki",
+      },
+      badges: ["Foundation Level"],
+      institution: "UXQCC - User Experience Quality Certification Center",
+      year: "2021",
+    },
+  ],
   skills: [
     "TypeScript",
     "JavaScript",
