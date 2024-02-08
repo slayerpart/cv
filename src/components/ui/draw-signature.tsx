@@ -1,6 +1,14 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { distributeRange } from "../../lib/utils";
+import { Section } from "@/components/ui/section";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { useRef } from "react";
 
 const transition = {
   duration: 0,
@@ -8,30 +16,47 @@ const transition = {
 } as const;
 
 export const DrawSignature = () => {
-  const { scrollYProgress } = useScroll();
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end end"],
+  });
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log("Page scroll: ", latest);
+  });
+
+  const ranges = distributeRange(
+    [2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2] as const,
+    [0.4, 1] as const,
+  );
 
   const pathLengthMotion = [
-    useTransform(scrollYProgress, [0.9, 0.91], [0, 1]),
-    useTransform(scrollYProgress, [0.91, 0.93], [0, 1]),
-    useTransform(scrollYProgress, [0.93, 0.933], [0, 1]),
-    useTransform(scrollYProgress, [0.933, 0.938], [0, 1]),
-    useTransform(scrollYProgress, [0.938, 0.943], [0, 1]),
-    useTransform(scrollYProgress, [0.943, 0.949], [0, 1]),
-    useTransform(scrollYProgress, [0.949, 0.954], [0, 1]),
-    useTransform(scrollYProgress, [0.954, 0.96], [0, 1]),
-    useTransform(scrollYProgress, [0.96, 0.972], [0, 1]),
-    useTransform(scrollYProgress, [0.972, 0.978], [0, 1]),
-    useTransform(scrollYProgress, [0.978, 0.98], [0, 1]),
-    useTransform(scrollYProgress, [0.98, 0.988], [0, 1]),
+    useTransform(scrollYProgress, ranges[0], [0, 1]),
+    useTransform(scrollYProgress, ranges[1], [0, 1]),
+    useTransform(scrollYProgress, ranges[2], [0, 1]),
+    useTransform(scrollYProgress, ranges[3], [0, 1]),
+    useTransform(scrollYProgress, ranges[4], [0, 1]),
+    useTransform(scrollYProgress, ranges[5], [0, 1]),
+    useTransform(scrollYProgress, ranges[6], [0, 1]),
+    useTransform(scrollYProgress, ranges[7], [0, 1]),
+    useTransform(scrollYProgress, ranges[8], [0, 1]),
+    useTransform(scrollYProgress, ranges[9], [0, 1]),
+    useTransform(scrollYProgress, ranges[10], [0, 1]),
+    useTransform(scrollYProgress, ranges[11], [0, 1]),
   ] as const;
 
-  const slideDownMotion = useTransform(scrollYProgress, [0.9, 1], [-20, 0]);
+  const slideDownMotion = useTransform(scrollYProgress, [0, 1], [-30, 0]);
 
   return (
-    <section aria-hidden className="flex w-64 items-center justify-center">
+    <Section
+      className="scroll-mb-16 flex items-center justify-center p-16 pb-32 print:hidden"
+      ref={sectionRef}
+      aria-hidden
+    >
       <motion.svg
-        width="100%"
-        height="100%"
+        width="256px"
+        height="42px"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="219.210 357.360 962.415 158.227"
         style={{
@@ -196,6 +221,6 @@ export const DrawSignature = () => {
           fill="none"
         />
       </motion.svg>
-    </section>
+    </Section>
   );
 };

@@ -84,25 +84,28 @@ export default function Page() {
           </div>
         </Section>
         <ProjectSection />
-        <Section className="scroll-mb-16 lex items-center justify-center p-16 pb-32 print:hidden">
-          <DrawSignature />
-        </Section>
       </section>
-      <CommandMenu
-        links={[
-          {
-            url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
-          },
-          ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-            url: socialMediaLink.url,
-            title: socialMediaLink.name,
-          })),
-        ]}
-        certificates={RESUME_DATA.certificates.map(
-          ({ verification, abbreviation }) => ({ verification, abbreviation }),
-        )}
-      />
+      <footer>
+        <DrawSignature />
+        <CommandMenu
+          links={[
+            {
+              url: RESUME_DATA.personalWebsiteUrl,
+              title: "Personal Website",
+            },
+            ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
+              url: socialMediaLink.url,
+              title: socialMediaLink.name,
+            })),
+          ]}
+          certificates={RESUME_DATA.certificates.map(
+            ({ verification, abbreviation }) => ({
+              verification,
+              abbreviation,
+            }),
+          )}
+        />
+      </footer>
     </main>
   );
 }
