@@ -10,6 +10,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import Image from "next/image";
 import { Certificate } from "crypto";
+import { DrawSignature } from "@/components/ui/draw-signature";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 pb-24 print:p-12 md:p-16 md:pb-32">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
@@ -336,6 +337,9 @@ export default function Page() {
               );
             })}
           </div>
+        </Section>
+        <Section className="flex scroll-mb-16 items-center justify-center p-8 print:hidden">
+          <DrawSignature />
         </Section>
       </section>
 
