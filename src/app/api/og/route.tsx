@@ -26,7 +26,7 @@ export async function GET() {
             width: "100%",
             height: "100%",
             position: "absolute",
-            opacity: "0.15",
+            opacity: "0.12",
             filter: "blur(120px)",
             borderRadius: "9999px",
             background: "linear-gradient(to right, #58AEF1, #ec4899)",
@@ -47,17 +47,17 @@ export async function GET() {
             alt="Profile Picture"
             style={{
               borderRadius: 32,
-              boxShadow: "3px 3px 15px #d4d4d410",
+              boxShadow: "3px 3px 15px #f5f5f510",
             }}
           />
           <span
             style={{
               width: 1.5,
               height: 192,
-              backgroundColor: "#d4d4d4D0",
+              backgroundColor: "#f5f5f5E0",
             }}
           />
-          <p style={{ fontSize: 128, color: "#d4d4d4D0" }}>CV</p>
+          <p style={{ fontSize: 128, color: "#f5f5f5E0" }}>CV</p>
         </div>
       </div>
     ),
