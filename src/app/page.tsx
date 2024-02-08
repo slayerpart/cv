@@ -291,6 +291,7 @@ export default function Page() {
                   tags={project.techStack}
                   link={"link" in project ? project.link.href : undefined}
                   logo={project.logo}
+                  active={project.active}
                 />
               );
             })}

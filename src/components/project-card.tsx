@@ -14,10 +14,18 @@ interface Props {
   description: string;
   tags: readonly string[];
   link?: string;
+  active: boolean;
   logo?: string;
 }
 
-export function ProjectCard({ title, description, tags, link, logo }: Props) {
+export function ProjectCard({
+  title,
+  description,
+  tags,
+  link,
+  logo,
+  active,
+}: Props) {
   return (
     <Card className="flex flex-col overflow-hidden border border-muted p-3">
       <CardHeader className="">
@@ -25,7 +33,7 @@ export function ProjectCard({ title, description, tags, link, logo }: Props) {
           <CardTitle className="flex text-base">
             {logo && (
               <Image
-                className="mr-1"
+                className="mr-1 flex-shrink-0 self-start"
                 src={logo}
                 alt={`${title} logo`}
                 height={24}
@@ -39,7 +47,9 @@ export function ProjectCard({ title, description, tags, link, logo }: Props) {
                 className="inline-flex items-center gap-1 hover:underline"
               >
                 {title}{" "}
-                <span className="size-1 rounded-full bg-green-500"></span>
+                {active && (
+                  <span className="size-1 rounded-full bg-green-500"></span>
+                )}
               </a>
             ) : (
               title

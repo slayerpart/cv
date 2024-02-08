@@ -21,6 +21,7 @@ import {
   NexenioLogo,
   HPILogo,
   BdriveLogo,
+  DEAIcon,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
@@ -201,6 +202,8 @@ export const RESUME_DATA = {
     "React",
     "Redux",
     "React Query",
+    "Styled Components",
+    "Tailwind",
     "Node.js",
     "Webpack",
     "Vite",
@@ -217,6 +220,7 @@ export const RESUME_DATA = {
       logo: NordLayerLogo,
       description:
         "NordLayer provides flexible and easy-to-implement cybersecurity tools for a business of any size or work model.",
+      active: true,
       techStack: [
         "TypeScript",
         "React",
@@ -237,6 +241,7 @@ export const RESUME_DATA = {
       logo: BdriveLogo,
       description:
         "Bdrive uses high-end encryption and fragmentation (RAID-technology) to securely store and share documents.",
+      active: false,
       techStack: [
         "TypeScript",
         "WebAssembly",
@@ -251,6 +256,18 @@ export const RESUME_DATA = {
       link: {
         label: "Bdrive Security Whitepaper",
         href: "https://www.datocms-assets.com/9477/1574811850-bdrive-security-whitepaper-en.pdf",
+      },
+    },
+    {
+      title: "Digital Registration on Entry for Germany",
+      logo: DEAIcon,
+      description:
+        "Upload portal for Digital Entry Registration for Germany. The portal was used by travelers to upload their health declaration form including vaccination, test or recovery certificates.",
+      active: false,
+      techStack: ["TypeScript", "Vue", "Webpack", "Jest"],
+      link: {
+        label: "Digital procedure for registration upon entry press release",
+        href: "https://www.bmi.bund.de/SharedDocs/pressemitteilungen/EN/2020/11/digitale-einreiseanmeldung-dea-en.html",
       },
     },
   ],
