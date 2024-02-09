@@ -34,9 +34,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <NavBar />
         {children}
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
-      <Analytics />
-      <SpeedInsights />
     </html>
   );
 }
