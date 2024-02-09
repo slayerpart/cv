@@ -2,12 +2,7 @@
 
 import { distributeRange } from "../../lib/utils";
 import { Section } from "@/components/ui/section";
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const transition = {
@@ -17,7 +12,7 @@ const transition = {
 
 const ranges = distributeRange({
   weights: [2, 3, 1, 4, 2, 2, 2, 2, 2, 2, 1, 2],
-  range: [0.25, 1],
+  range: [0.3, 1],
 });
 
 export const DrawSignature = () => {
@@ -25,10 +20,6 @@ export const DrawSignature = () => {
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end end"],
-  });
-
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log("Page scroll: ", latest);
   });
 
   const pathLengthMotion = [

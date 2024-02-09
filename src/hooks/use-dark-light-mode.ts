@@ -21,8 +21,9 @@ const setMode = (mode: DarkLightMode) => {
 };
 
 /**
- * Custom hook for managing dark/light mode.
- * Retrieves the mode from cookie, if available, and initializes it.
+ * Custom hook that manages the dark/light mode state.
+ * It determines the initial mode based on the user's preferred color scheme,
+ * or falls back to the value stored in a cookie.
  * Provides a function to toggle between dark and light mode.
  *
  * @returns An object containing the current dark/light mode and a function to toggle the mode.
@@ -31,15 +32,6 @@ export const useDarkLightMode = () => {
   const [darkLightMode, setDarkLightMode] = useState<DarkLightMode>();
 
   useLayoutEffect(() => {
-    console.log(
-      'window.matchMedia("(prefers-color-scheme: dark)").matches',
-      window.matchMedia("(prefers-color-scheme: dark)").matches,
-    );
-
-    console.log(
-      'window.matchMedia("(prefers-color-scheme: light)").matches',
-      window.matchMedia("(prefers-color-scheme: light)").matches,
-    );
     const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "true"
       : window.matchMedia("(prefers-color-scheme: light)").matches

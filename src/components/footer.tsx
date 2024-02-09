@@ -4,7 +4,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 
 export const Footer = () => {
   return (
-    <footer className="mb-8">
+    <footer className="mb-16">
       <DrawSignature />
       <CommandMenu
         links={[
