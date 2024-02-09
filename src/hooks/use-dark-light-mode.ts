@@ -1,4 +1,4 @@
-import { getCookie, setCookie } from "cookies-next";
+import { getCookie, hasCookie, setCookie } from "cookies-next";
 import { useCallback, useLayoutEffect, useState } from "react";
 
 export const MODE = { LIGHT: "light", DARK: "dark" } as const;
@@ -32,28 +32,33 @@ export const useDarkLightMode = () => {
   const [darkLightMode, setDarkLightMode] = useState<DarkLightMode>();
 
   useLayoutEffect(() => {
-    const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "true"
-      : window.matchMedia("(prefers-color-scheme: light)").matches
-        ? "false"
-        : getCookie("darkMode") ?? "false";
+    console.log({
+      hasCookie: hasCookie("darkMode"),
+      cookie: getCookie("darkMode"),
+    });
+    const darkMode = hasCookie("darkMode")
+      ? getCookie("darkMode")
+      : window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "true"
+        : "false";
+
     setDarkLightMode(darkMode === "true" ? MODE.DARK : MODE.LIGHT);
+    setMode(darkMode === "true" ? MODE.DARK : MODE.LIGHT);
   }, []);
 
   const toggleDarkLightMode = useCallback(() => {
     const switchMode = () => {
-      setDarkLightMode((currentMode) =>
-        currentMode === MODE.LIGHT ? MODE.DARK : MODE.LIGHT,
-      );
+      setDarkLightMode((currentMode) => {
+        const newMode = currentMode === MODE.LIGHT ? MODE.DARK : MODE.LIGHT;
+        setMode(newMode);
+
+        return newMode;
+      });
     };
 
     if (!document.startViewTransition) switchMode();
     document.startViewTransition?.(switchMode);
   }, []);
-
-  useLayoutEffect(() => {
-    setMode(darkLightMode === MODE.LIGHT ? MODE.DARK : MODE.LIGHT);
-  }, [darkLightMode]);
 
   return { darkLightMode, toggleDarkLightMode };
 };
