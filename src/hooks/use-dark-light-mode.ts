@@ -11,7 +11,7 @@ export type DarkLightMode = (typeof MODE)[keyof typeof MODE];
 const setMode = (mode: DarkLightMode) => {
   const root = window.document.documentElement;
 
-  if (mode === MODE.LIGHT) {
+  if (mode === MODE.DARK) {
     root.classList.add(MODE.DARK);
     setCookie("darkMode", "true");
   } else {
