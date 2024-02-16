@@ -32,10 +32,6 @@ export const useDarkLightMode = () => {
   const [darkLightMode, setDarkLightMode] = useState<DarkLightMode>();
 
   useLayoutEffect(() => {
-    console.log({
-      hasCookie: hasCookie("darkMode"),
-      cookie: getCookie("darkMode"),
-    });
     const darkMode = hasCookie("darkMode")
       ? getCookie("darkMode")
       : window.matchMedia("(prefers-color-scheme: dark)").matches
