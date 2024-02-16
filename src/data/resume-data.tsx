@@ -16,7 +16,7 @@ export const RESUME_DATA = {
   about:
     "Frontend Engineer focused on building accessible user interfaces with extra attention to UX and security",
   summary:
-    "As a Technical Lead and Frontend Engineer, my commitment to crafting seamless user experiences, prioritizing robust usability, and upholding stringent security standards has driven me to lead teams and make strategic technical decisions, nurturing growth of various web applications. As a dedicated TypeScript advocate, I leverage its power to enhance development, foster robustness, and elevate code quality.",
+    "As a Technical Lead and Frontend Engineer, my commitment to crafting seamless user experiences, prioritizing robust usability, and upholding security standards has driven me to lead teams and make strategic technical decisions, nurturing growth of various web applications. As a dedicated TypeScript advocate, I leverage its power to enhance development, foster robustness, and elevate code quality.",
   avatarUrl: "https://avatars.githubusercontent.com/u/6815357?v=4",
   personalWebsiteUrl: "https://gorecki.cc",
   contact: {
@@ -76,6 +76,7 @@ export const RESUME_DATA = {
         "TypeScript",
         "React Query",
         "Styled Components",
+        "Tailwind CSS",
         "Cypress",
         "Gitlab CI",
       ],
@@ -95,6 +96,7 @@ export const RESUME_DATA = {
         "TypeScript",
         "React Query",
         "Styled Components",
+        "Tailwind CSS",
         "Cypress",
         "Gitlab CI",
       ],
@@ -183,7 +185,8 @@ export const RESUME_DATA = {
     "Next.js",
     "React",
     "React Query",
-    "Tailwind",
+    "Tailwind CSS",
+    "Styled Components",
     "Webpack",
     "Vite",
     "RTL",
