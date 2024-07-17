@@ -70,7 +70,7 @@ export const RESUME_DATA = {
       start: "12/2022",
       end: "now",
       description:
-        "Responsible for strategic technical product decisions, I mentor a team of three Frontend Engineers with tailored development plans, improve core web vitals across diverse applications, optimize CI pipelines for productivity, and automate the detection of transitive dependency vulnerabilities.",
+        "Responsible for strategic technical product decisions, I mentor a team of four Frontend Engineers with tailored development plans, improve core web vitals across diverse applications, optimize CI pipelines for productivity, and automate the detection of transitive dependency vulnerabilities.",
       technologies: [
         "React",
         "TypeScript",
