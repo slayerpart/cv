@@ -24,7 +24,7 @@ Built with Next.js and shadcn/ui, deployed on Vercel.
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/slayerpart/cv.git
+   git clone git@github.com:slayerpart/cv.git
    ```
 
 2. Move to the cloned directory
