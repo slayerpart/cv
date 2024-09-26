@@ -66,7 +66,7 @@ export const RESUME_DATA = {
       link: "https://nordsecurity.com",
       badges: [],
       title: "Technical Lead",
-      logo: NordSecurityLogo,
+      logo: { src: NordSecurityLogo, shouldInvertOnDarkMode: true },
       start: "12/2022",
       end: "now",
       description:
@@ -86,7 +86,7 @@ export const RESUME_DATA = {
       link: "https://nordsecurity.com",
       badges: [],
       title: "Senior Frontend Engineer",
-      logo: NordSecurityLogo,
+      logo: { src: NordSecurityLogo, shouldInvertOnDarkMode: true },
       start: "04/2022",
       end: "12/2022",
       description:
@@ -106,7 +106,7 @@ export const RESUME_DATA = {
       link: "https://nexenio.com",
       badges: [],
       title: "Senior Frontend Engineer",
-      logo: NexenioLogo,
+      logo: { src: NexenioLogo, shouldInvertOnDarkMode: false },
       start: "04/2020",
       end: "03/2022",
       description:
@@ -125,7 +125,7 @@ export const RESUME_DATA = {
       link: "https://nexenio.com",
       badges: [],
       title: "Frontend Engineer",
-      logo: NexenioLogo,
+      logo: { src: NexenioLogo, shouldInvertOnDarkMode: false },
       start: "04/2017",
       end: "03/2020",
       description:
@@ -155,7 +155,7 @@ export const RESUME_DATA = {
       link: "https://hpi.de/naumann/home.html",
       badges: [],
       title: "Student Research Assistant",
-      logo: HPILogo,
+      logo: { src: HPILogo, shouldInvertOnDarkMode: false },
       start: "04/2014",
       end: "03/2016",
       description:

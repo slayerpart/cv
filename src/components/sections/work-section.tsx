@@ -2,6 +2,7 @@ import { Badge } from "../ui/badge";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { Section } from "../ui/section";
 import { RESUME_DATA } from "@/data/resume-data";
+import { clsx } from "clsx";
 import Image from "next/image";
 
 export const WorkSection = () => {
@@ -23,9 +24,13 @@ export const WorkSection = () => {
                   </a>
                   {"logo" in work && (
                     <Image
+                      className={clsx(
+                        work.logo.shouldInvertOnDarkMode &&
+                          "filter dark:invert",
+                      )}
                       width={16}
                       height={16}
-                      src={work.logo}
+                      src={work.logo.src}
                       alt={`${work.company} logo`}
                     />
                   )}
