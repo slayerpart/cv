@@ -21,17 +21,19 @@ export const CertificateSection = () => {
                   >
                     {certificate.title}
                   </a>
-                  <span className="inline-flex gap-x-1">
-                    {certificate.badges.map((badge) => (
-                      <Badge
-                        variant="secondary"
-                        className="align-middle text-xs"
-                        key={badge}
-                      >
-                        {badge}
-                      </Badge>
-                    ))}
-                  </span>
+                  {"badges" in certificate && (
+                    <span className="inline-flex gap-x-1">
+                      {certificate.badges.map((badge) => (
+                        <Badge
+                          variant="secondary"
+                          className="align-middle text-xs"
+                          key={badge}
+                        >
+                          {badge}
+                        </Badge>
+                      ))}
+                    </span>
+                  )}
                 </h3>
                 <div className="shrink-0 text-sm tabular-nums text-gray-500">
                   {certificate.year}
@@ -44,7 +46,9 @@ export const CertificateSection = () => {
             </CardHeader>
             {"verification" in certificate && (
               <CardContent className="mt-2 text-xs">
-                {certificate.verification.details}
+                {"details" in certificate.verification
+                  ? certificate.verification.details
+                  : ""}
                 <p>
                   <Button
                     className="mt-2"

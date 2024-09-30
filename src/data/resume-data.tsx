@@ -177,6 +177,17 @@ export const RESUME_DATA = {
       institution: "UXQCC - User Experience Quality Certification Center",
       year: "2021",
     },
+    {
+      title: "Principal Developer Masterclass",
+      abbreviation: "PDM",
+      id: "U07MM9Z41E0",
+      url: "https://principal.dev/",
+      verification: {
+        url: "https://certs.principal.dev/34x/U07MM9Z41E0",
+      },
+      institution: "Eduards Sizovs",
+      year: "2024",
+    },
   ],
   skills: [
     "Node.js",
