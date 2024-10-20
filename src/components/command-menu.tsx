@@ -96,7 +96,7 @@ export const CommandMenu = ({ links, certificates }: Props) => {
                   }
                 }}
               >
-                <span>Verify certificate</span>
+                <span>Verify {abbreviation} certificate</span>
               </CommandItem>
             ))}
           </CommandGroup>
