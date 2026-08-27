@@ -97,7 +97,7 @@ export default function Page() {
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.languages.map(({ name, level }) => (
               <Badge variant="secondary" key={name}>
-                {name} — {level}
+                {name} • {level}
               </Badge>
             ))}
           </div>
