@@ -38,9 +38,11 @@ export const EducationSection = () => {
             </CardHeader>
             <CardContent className="mt-2 flex flex-wrap justify-between gap-2">
               {education.degree}
-              <Badge variant="secondary" className="align-middle text-xs">
-                {education.grade}
-              </Badge>
+              {"grade" in education && (
+                <Badge variant="secondary" className="align-middle text-xs">
+                  {education.grade}
+                </Badge>
+              )}
             </CardContent>
           </Card>
         );

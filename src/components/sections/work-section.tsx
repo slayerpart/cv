@@ -55,7 +55,13 @@ export const WorkSection = () => {
               <h4 className="font-mono text-sm leading-none">{work.title}</h4>
             </CardHeader>
             <CardContent className="mt-2 text-xs">
-              {work.description}
+              <ul className="list-outside list-disc space-y-1 pl-4">
+                {work.description.map((achievement) => (
+                  <li className="text-pretty" key={achievement}>
+                    {achievement}
+                  </li>
+                ))}
+              </ul>
               <div className="my-3 flex flex-wrap gap-1">
                 {work.technologies.map((technology) => {
                   return (

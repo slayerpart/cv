@@ -71,12 +71,21 @@ export default function Page() {
         <EducationSection />
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
-          <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.skills.map((skill) => {
+          <div className="space-y-2 print:space-y-1.5">
+            {RESUME_DATA.skills.map(({ category, items }) => {
               return (
-                <Badge variant="secondary" key={skill}>
-                  {skill}
-                </Badge>
+                <div key={category}>
+                  <h3 className="font-mono text-xs text-muted-foreground">
+                    {category}
+                  </h3>
+                  <div className="mt-1 flex flex-wrap gap-1">
+                    {items.map((skill) => (
+                      <Badge variant="secondary" key={skill}>
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
               );
             })}
           </div>

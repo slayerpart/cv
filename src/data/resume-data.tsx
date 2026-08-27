@@ -11,12 +11,12 @@ import {
 export const RESUME_DATA = {
   name: "Marvin Gorecki",
   initials: "MG",
-  location: "Berlin, Germany, CET",
+  location: "Berlin, Germany",
   locationLink: "https://www.google.com/maps/place/Berlin",
   about:
-    "Frontend Engineer focused on building accessible user interfaces with extra attention to UX and security",
+    "Technical Lead & Frontend Engineer — Accessibility, Design Systems, Web Performance & Security",
   summary:
-    "As a Technical Lead and Frontend Engineer, my commitment to crafting seamless user experiences, prioritizing robust usability, and upholding security standards has driven me to lead teams and make strategic technical decisions, nurturing growth of various web applications. As a dedicated TypeScript advocate, I leverage its power to enhance development, foster robustness, and elevate code quality.",
+    "Technical Lead and Frontend Engineer with 10+ years of experience building complex web applications with React and TypeScript. I focus on frontend architecture, accessibility, design systems, web performance, type safety, and security. I lead technical initiatives across applications, mentor engineers, and turn recurring engineering challenges into reusable solutions. My recent work includes improving the accessibility of four single-page applications to WCAG 2.2 AA, initiating an accessible design system, improving Core Web Vitals and developer workflows, and strengthening frontend supply-chain security.",
   avatarUrl: "https://avatars.githubusercontent.com/u/6815357?v=4",
   personalWebsiteUrl: "https://gorecki.cc",
   contact: {
@@ -44,8 +44,7 @@ export const RESUME_DATA = {
       school: "Hasso Plattner Institute",
       url: "https://hpi.de/en/",
       logo: HPILogo,
-      degree: "IT Systems Engineering M.Sc.",
-      grade: "discontinued",
+      degree: "M.Sc. studies, IT Systems Engineering",
       focus: "Information security",
       start: "2019",
       end: "2021",
@@ -54,7 +53,7 @@ export const RESUME_DATA = {
       school: "Hasso Plattner Institute",
       logo: HPILogo,
       url: "https://hpi.de/en/",
-      degree: "IT Systems Engineering B.Sc.",
+      degree: "B.Sc. IT Systems Engineering",
       grade: "1.5",
       start: "2013",
       end: "2017",
@@ -69,14 +68,18 @@ export const RESUME_DATA = {
       logo: { src: NordSecurityLogo, shouldInvertOnDarkMode: true },
       start: "12/2022",
       end: "now",
-      description:
-        "Responsible for strategic technical product decisions, I mentor a team of four Frontend Engineers with tailored development plans, improve core web vitals across diverse applications, optimize CI pipelines for productivity, and automate the detection of transitive dependency vulnerabilities.",
+      description: [
+        "Drive technical and architectural decisions across frontend applications and mentor four Frontend Engineers through individual development plans, technical guidance, and code reviews.",
+        "Led accessibility improvements across four single-page applications targeting WCAG 2.2 AA, resolving recurring accessibility issues and establishing accessible implementation patterns.",
+        "Initiated a reusable, accessible design system, now around 50 components consumed by 5+ applications, establishing consistent UI patterns and making accessibility a default part of frontend development.",
+        "Improved Core Web Vitals across multiple applications by identifying performance bottlenecks and driving targeted improvements.",
+        "Optimized CI pipelines to shorten developer feedback cycles and improve engineering productivity.",
+        "Automated the detection of vulnerabilities introduced through transitive dependencies, strengthening frontend software-supply-chain security.",
+      ],
       technologies: [
         "React",
         "TypeScript",
-        "React Query",
-        "Styled Components",
-        "Tailwind CSS",
+        "Storybook",
         "Cypress",
         "Gitlab CI",
       ],
@@ -89,15 +92,17 @@ export const RESUME_DATA = {
       logo: { src: NordSecurityLogo, shouldInvertOnDarkMode: true },
       start: "04/2022",
       end: "12/2022",
-      description:
-        "I implemented product features, developed a comprehensible design system, and streamline code deployment processes for developers. Additionally, I led knowledge-sharing sessions, imparting advanced TypeScript concepts to foster skill development within the team.",
+      description: [
+        "Built product features across React and TypeScript applications and contributed to frontend architectural decisions.",
+        "Developed a reusable design system to standardize UI implementation and improve consistency across the product.",
+        "Streamlined deployment workflows to reduce friction for frontend developers.",
+        "Led internal knowledge-sharing sessions on advanced TypeScript concepts and type-safe application design.",
+      ],
       technologies: [
         "React",
         "TypeScript",
         "React Query",
         "Styled Components",
-        "Tailwind CSS",
-        "Cypress",
         "Gitlab CI",
       ],
     },
@@ -109,15 +114,18 @@ export const RESUME_DATA = {
       logo: { src: NexenioLogo, shouldInvertOnDarkMode: false },
       start: "04/2020",
       end: "03/2022",
-      description:
-        "Responsible for Bdrive's product feature implementation, I integrated WebAssembly-based encryption and decryption fallbacks to polyfill the Web Crypto API. Additionally, I crafted a user-based entropy sourcing UI and was accountable for implementing a custom identity provider service.",
+      description: [
+        "Developed security-critical frontend functionality for Bdrive, an end-to-end encrypted file storage and sharing platform.",
+        "Implemented WebAssembly-based encryption and decryption fallbacks to enable end-to-end encryption in browsers where Web Crypto API support was still limited.",
+        "Designed a user-driven entropy collection mechanism for cryptographic key generation.",
+        "Implemented the frontend integration with a custom identity provider and authentication service.",
+      ],
       technologies: [
         "React",
         "TypeScript",
+        "WebAssembly",
+        "Web Crypto API",
         "Redux",
-        "Redux Saga",
-        "Styled Components",
-        "Jenkins",
       ],
     },
     {
@@ -128,15 +136,17 @@ export const RESUME_DATA = {
       logo: { src: NexenioLogo, shouldInvertOnDarkMode: false },
       start: "04/2017",
       end: "03/2020",
-      description:
-        "Responsible for Bdrive's product feature implementation, I oversaw the development of a comprehensive design system and created intuitive up-/download UI visualizations. These visualizations effectively conveyed the use of end-to-end encryption for securely sharing files.",
+      description: [
+        "Developed core product functionality for Bdrive, a secure end-to-end encrypted file sharing platform.",
+        "Led the development of a reusable design system for consistent product UI implementation.",
+        "Designed upload and download visualizations that made encrypted file-transfer states understandable to users.",
+      ],
       technologies: [
         "React",
         "TypeScript",
         "Redux",
         "Redux Saga",
         "Styled Components",
-        "Jenkins",
       ],
     },
     {
@@ -146,8 +156,9 @@ export const RESUME_DATA = {
       title: "Junior Frontend Engineer",
       start: "04/2016",
       end: "03/2017",
-      description:
-        "Implemented internal tools designed to leverage the power of machine learning algorithms through curated tagged input data, ensuring streamlined utilization within the organizational framework.",
+      description: [
+        "Built internal data-labeling tools used to create curated training datasets for machine-learning models.",
+      ],
       technologies: ["React", "Flow", "Redux", "Styled Components"],
     },
     {
@@ -158,12 +169,25 @@ export const RESUME_DATA = {
       logo: { src: HPILogo, shouldInvertOnDarkMode: false },
       start: "04/2014",
       end: "03/2016",
-      description:
-        "Designed and implemented an automated data scraping and aggregation system capable of seamlessly integrating a variety of public datasets. This system provides a comprehensive perspective by combining and organizing data from multiple sources, enhancing the decision-making process.",
+      description: [
+        "Designed and built an automated data ingestion pipeline for scraping, aggregating, and normalizing heterogeneous public datasets.",
+        "Built analytical interfaces combining multiple data sources to support the exploration of company networks.",
+      ],
       technologies: ["Python", "Scrapy", "AWS", "MongoDB", "AngularJS"],
     },
   ],
   certificates: [
+    {
+      title: "Principal Developer Masterclass",
+      abbreviation: "PDM",
+      id: "U07MM9Z41E0",
+      url: "https://principal.dev/",
+      verification: {
+        url: "https://certs.principal.dev/34x/U07MM9Z41E0",
+      },
+      institution: "Eduards Sizovs",
+      year: "2024",
+    },
     {
       title: "Certified Professional for Usability Engineering",
       abbreviation: "CPUE",
@@ -177,42 +201,50 @@ export const RESUME_DATA = {
       institution: "UXQCC - User Experience Quality Certification Center",
       year: "2021",
     },
-    {
-      title: "Principal Developer Masterclass",
-      abbreviation: "PDM",
-      id: "U07MM9Z41E0",
-      url: "https://principal.dev/",
-      verification: {
-        url: "https://certs.principal.dev/34x/U07MM9Z41E0",
-      },
-      institution: "Eduards Sizovs",
-      year: "2024",
-    },
   ],
   skills: [
-    "Node.js",
-    "TypeScript",
-    "JavaScript",
-    "Next.js",
-    "React",
-    "React Query",
-    "Tailwind CSS",
-    "Styled Components",
-    "Webpack",
-    "Vite",
-    "RTL",
-    "Storybook",
-    "Cypress",
-    "CI/CD",
-    "Core Web Vitals",
-    "OWASP",
+    {
+      category: "Frontend",
+      items: [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "React Query",
+        "Node.js",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      category: "Architecture & UX Engineering",
+      items: [
+        "Accessibility",
+        "WCAG",
+        "Design Systems",
+        "Storybook",
+        "Core Web Vitals",
+        "Responsive UI",
+      ],
+    },
+    {
+      category: "Testing",
+      items: ["React Testing Library", "Cypress", "Vitest"],
+    },
+    {
+      category: "Tooling & Delivery",
+      items: ["Vite", "Webpack", "Gitlab CI", "CI/CD"],
+    },
+    {
+      category: "Security",
+      items: ["OWASP", "Web Crypto API", "WebAssembly", "Dependency Security"],
+    },
   ],
   projects: [
     {
       title: "NordLayer",
       logo: NordLayerLogo,
       description:
-        "NordLayer provides flexible and easy-to-implement cybersecurity tools for a business of any size or work model.",
+        "Technical Lead and Frontend Engineer across NordLayer's React applications, focusing on frontend architecture, accessibility, design systems, performance, and developer tooling.",
       active: true,
       techStack: [
         "Next.js",
@@ -222,7 +254,7 @@ export const RESUME_DATA = {
         "Vite",
         "Vitest",
         "Cypress",
-        "RTL",
+        "React Testing Library",
         "Storybook",
       ],
       link: {
@@ -234,7 +266,7 @@ export const RESUME_DATA = {
       title: "Bdrive",
       logo: BdriveLogo,
       description:
-        "Bdrive employs cutting-edge encryption and fragmentation (RAID technology) to ensure the secure storage and seamless sharing of documents.",
+        "Developed core frontend functionality and security-sensitive browser capabilities for an end-to-end encrypted file storage and sharing platform, including WebAssembly cryptography fallbacks, entropy collection, and authentication.",
       active: false,
       techStack: [
         "TypeScript",
@@ -245,7 +277,7 @@ export const RESUME_DATA = {
         "Webpack",
         "Jest",
         "Cypress",
-        "RTL",
+        "React Testing Library",
       ],
       link: {
         label: "Bdrive Security Whitepaper",
@@ -256,7 +288,7 @@ export const RESUME_DATA = {
       title: "DEA",
       logo: DEAIcon,
       description:
-        "Digital Entry Registration Upload Portal for Germany: Enabling Travelers to Submit Covid-Related Certificates of Vaccination, Testing, or Recovery.",
+        "Built the document upload mechanism and the UI/UX for Germany's digital entry registration portal, used by travellers entering the country during COVID-19 to submit certificates of vaccination, testing, or recovery.",
       active: false,
       techStack: ["TypeScript", "Vue", "Webpack", "Karma"],
       link: {
@@ -268,7 +300,7 @@ export const RESUME_DATA = {
       title: "Contagion",
       logo: HPILogo,
       description:
-        "Advanced Analytical Exploration Tools for Semantic Company Networks Utilizing Public Knowledge Bases.",
+        "Built data collection and analytical tooling for exploring company relationships derived from public knowledge bases.",
       active: false,
       techStack: ["React", "Python", "Scrapy", "MongoDB", "Neo4j", "AWS"],
       link: {
