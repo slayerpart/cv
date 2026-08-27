@@ -107,3 +107,28 @@ html.dark::view-transition-new(root) {
     clip-path: polygon(130% 0, -30% 0, -15% 100%, 110% 115%);
   }
 }
+
+/*
+ * WCAG 2.3.3 Animation from Interactions. The theme toggle sweeps a 0.8s
+ * full-screen clip-path across the viewport, which is exactly the kind of
+ * large-area motion that triggers vestibular discomfort.
+ *
+ * The view-transition pseudo-elements live outside the document tree, so the
+ * universal selector cannot reach them - they need cancelling by name.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html::view-transition-group(root),
+  html::view-transition-new(root),
+  html::view-transition-old(root) {
+    animation: none !important;
+  }
+}
