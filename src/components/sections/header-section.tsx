@@ -40,6 +40,7 @@ export const HeaderSection = () => {
                   >
                     <a href={`mailto:${RESUME_DATA.contact.email}`}>
                       <MailIcon className="size-4" />
+                      <span className="sr-only">Email</span>
                     </a>
                   </Button>
                 </TooltipTrigger>
@@ -59,6 +60,7 @@ export const HeaderSection = () => {
                   >
                     <a href={`tel:${RESUME_DATA.contact.tel}`}>
                       <PhoneIcon className="size-4" />
+                      <span className="sr-only">Call</span>
                     </a>
                   </Button>
                 </TooltipTrigger>
@@ -78,6 +80,7 @@ export const HeaderSection = () => {
                   >
                     <a href={social.url}>
                       <social.icon className="size-4" />
+                      <span className="sr-only">{social.name}</span>
                     </a>
                   </Button>
                 </TooltipTrigger>

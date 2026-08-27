@@ -56,6 +56,7 @@ export const CommandMenu = ({ links, certificates }: Props) => {
         className="fixed bottom-4 right-4 flex rounded-full shadow-2xl print:hidden xl:hidden"
       >
         <CommandIcon className="my-6 size-6" />
+        <span className="sr-only">Open command menu</span>
       </Button>
       <Button
         onClick={toggleDarkLightMode}
