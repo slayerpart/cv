@@ -70,6 +70,7 @@ export const RESUME_DATA = {
       end: "now",
       description: [
         "Drive technical and architectural decisions across frontend applications and mentor four Frontend Engineers through individual development plans, technical guidance, and code reviews.",
+        "Conduct technical interviews for frontend candidates, contributing to hiring decisions and interview standards.",
         "Led accessibility improvements across four single-page applications targeting WCAG 2.2 AA, resolving recurring accessibility issues and establishing accessible implementation patterns.",
         "Initiated a reusable, accessible design system, now around 50 components consumed by 5+ applications, establishing consistent UI patterns and making accessibility a default part of frontend development.",
         "Improved Core Web Vitals across multiple applications by identifying performance bottlenecks and driving targeted improvements.",
