@@ -5,9 +5,9 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { RESUME_DATA } from "@/data/resume-data";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import Image from "next/image";
 
 export const HeaderSection = () => {
   return (
@@ -108,10 +108,14 @@ export const HeaderSection = () => {
         </div>
       </div>
 
-      <Avatar className="size-28">
-        <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-        <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-      </Avatar>
+      <Image
+        className="size-28 shrink-0 rounded-xl"
+        src={RESUME_DATA.avatarUrl}
+        alt={RESUME_DATA.name}
+        width={112}
+        height={112}
+        priority
+      />
     </div>
   );
 };
