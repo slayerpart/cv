@@ -92,6 +92,16 @@ export default function Page() {
             })}
           </div>
         </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Languages</h2>
+          <div className="flex flex-wrap gap-1">
+            {RESUME_DATA.languages.map(({ name, level }) => (
+              <Badge variant="secondary" key={name}>
+                {name} — {level}
+              </Badge>
+            ))}
+          </div>
+        </Section>
         <ProjectSection />
       </section>
     </main>

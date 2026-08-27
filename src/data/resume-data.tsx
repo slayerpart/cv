@@ -239,6 +239,10 @@ export const RESUME_DATA = {
       items: ["OWASP", "Web Crypto API", "WebAssembly", "Dependency Security"],
     },
   ],
+  languages: [
+    { name: "German", level: "Native" },
+    { name: "English", level: "Fluent" },
+  ],
   projects: [
     {
       title: "NordLayer",
