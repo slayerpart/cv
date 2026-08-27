@@ -58,6 +58,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* WCAG 2.4.7 Focus Visible: plain links had no indicator of their own. */
+  a:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
 }
 
 .print-force-new-page {
