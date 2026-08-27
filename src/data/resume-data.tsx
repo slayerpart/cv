@@ -16,7 +16,7 @@ export const RESUME_DATA = {
   about:
     "Technical Lead & Frontend Engineer — Accessibility, Design Systems, Web Performance & Security",
   summary:
-    "Technical Lead and Frontend Engineer with 10+ years of experience building complex web applications with React and TypeScript. I focus on frontend architecture, accessibility, design systems, web performance, type safety, and security. I lead technical initiatives across applications, mentor engineers, and turn recurring engineering challenges into reusable solutions. My recent work includes improving the accessibility of four single-page applications to WCAG 2.2 AA, initiating an accessible design system, improving Core Web Vitals and developer workflows, and strengthening frontend supply-chain security.",
+    "Technical Lead and Frontend Engineer with 10+ years of experience building complex web applications with React and TypeScript. I focus on frontend architecture, accessibility, design systems, web performance, type safety, and security. I lead technical initiatives across applications, mentor engineers, and turn recurring engineering challenges into reusable solutions. My recent work includes improving the accessibility of four single-page applications to WCAG 2.2 AA, initiating an accessible design system, improving Core Web Vitals and developer workflows, strengthening frontend supply-chain security, and shipping LLM-backed features.",
   avatarUrl: "https://avatars.githubusercontent.com/u/6815357?v=4",
   personalWebsiteUrl: "https://gorecki.cc",
   contact: {
@@ -75,6 +75,7 @@ export const RESUME_DATA = {
         "Improved Core Web Vitals across multiple applications by identifying performance bottlenecks and driving targeted improvements.",
         "Optimized CI pipelines to shorten developer feedback cycles and improve engineering productivity.",
         "Automated the detection of vulnerabilities introduced through transitive dependencies, strengthening frontend software-supply-chain security.",
+        "Shipped LLM-backed product features and led the team's adoption of sandboxed LLM environments, establishing how AI tooling is run safely in day-to-day development.",
       ],
       technologies: [
         "React",
@@ -233,6 +234,14 @@ export const RESUME_DATA = {
     {
       category: "Tooling & Delivery",
       items: ["Vite", "Webpack", "Gitlab CI", "CI/CD"],
+    },
+    {
+      category: "AI Engineering",
+      items: [
+        "LLM Integration",
+        "AI-Assisted Development",
+        "Sandboxed LLM Environments",
+      ],
     },
     {
       category: "Security",
