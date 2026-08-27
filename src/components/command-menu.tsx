@@ -93,7 +93,11 @@ export const CommandMenu = ({ links, certificates }: Props) => {
                 onSelect={() => {
                   setOpen(false);
                   if (verification) {
-                    window.open(verification.url, "_blank");
+                    window.open(
+                      verification.url,
+                      "_blank",
+                      "noopener,noreferrer",
+                    );
                   }
                 }}
               >
@@ -107,7 +111,7 @@ export const CommandMenu = ({ links, certificates }: Props) => {
                 key={url}
                 onSelect={() => {
                   setOpen(false);
-                  window.open(url, "_blank");
+                  window.open(url, "_blank", "noopener,noreferrer");
                 }}
               >
                 <span>{title}</span>

@@ -60,6 +60,7 @@ export const CertificateSection = () => {
                       href={certificate.verification.url}
                       className="hover:underline"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Verify
                     </a>
