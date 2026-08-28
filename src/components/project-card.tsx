@@ -56,7 +56,10 @@ export function ProjectCard({
             )}
           </CardTitle>
           <div className="hidden font-mono text-xs underline print:visible">
-            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
+            {link
+              ?.replace(/^https?:\/\//, "")
+              .replace(/^www\./, "")
+              .replace(/\/$/, "")}
           </div>
           <CardDescription className="font-mono text-xs">
             {description}

@@ -291,7 +291,7 @@ export const RESUME_DATA = {
       logo: BdriveLogo,
       description:
         "Developed core frontend functionality and security-sensitive browser capabilities for an end-to-end encrypted file storage and sharing platform, including WebAssembly cryptography fallbacks, entropy collection, and authentication.",
-      active: false,
+      active: true,
       techStack: [
         "TypeScript",
         "WebAssembly",
@@ -304,8 +304,8 @@ export const RESUME_DATA = {
         "React Testing Library",
       ],
       link: {
-        label: "Bdrive Security Whitepaper",
-        href: "https://www.datocms-assets.com/9477/1574811850-bdrive-security-whitepaper-en.pdf",
+        label: "bundesdruckerei-gmbh.de",
+        href: "https://www.bundesdruckerei-gmbh.de/en/solutions/bdrive",
       },
     },
     {
